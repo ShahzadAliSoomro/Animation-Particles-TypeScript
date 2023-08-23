@@ -11,7 +11,7 @@ import { BiSortDown } from "react-icons/bi";
 export default function Header() {
   
   return (
-    <div className="fixed w-full">
+    <div className="fixed w-full z-40">
       <div className="container mx-auto py-4">
         <div className="flex justify-between items-center">
           <div className="text-white text-lg font-semibold">
