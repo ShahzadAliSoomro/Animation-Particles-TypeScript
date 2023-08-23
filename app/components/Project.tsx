@@ -5,7 +5,7 @@ import Link from "next/link";
 const Projects = [
   {
     id: 1,
-    image: "/hero3.avif",
+    video: "/ezifuel.mp4",
     text: "Experienced frontend developer skilled in HTML, CSS, JavaScript, React, Next.js, and Tailwind CSS. Creates responsive and dynamic web applications with a strong grasp of HTML structure, CSS styling, and JavaScript functionality. Proficient in React and Next.js for scalable and performant applications. Utilizes Tailwind CSS for efficient and responsive styling. Offers expertise in the front-end development stack for modern and engaging web experiences.",
     githubLink: "https://github.com/example/project1",
     demoLink: "https://demo.example/project1",
@@ -55,9 +55,12 @@ export default function Project() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 pt-5">
         {Projects.map((project) => (
-          <div className="flex flex-col border shadow p-3">
+          <div key={project.id} className="flex flex-col border shadow p-3">
             <div className="w-full ">
-              <Image src={project.image} alt="hero" width={500} height={500} />
+            <video controls width={500} height={500}>
+                <source src={project.video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
             <div>
               <p> {project.text}</p>
