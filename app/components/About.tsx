@@ -7,7 +7,7 @@ export default function About() {
       <div className="text-4xl text-center pt-10">
         <h1>About</h1>
       </div>
-      <div className="flex justify-between pt-5">
+      <div className="flex justify-between pt-5 flex-wrap gap-6 lg:flex-nowrap lg:gap-0">
         <div className="flex flex-col gap-3">
           <h4 className="text-2xl">I'm Shahzad Ali</h4>
           <p className="w-full lg:w-6/12 text-justify">

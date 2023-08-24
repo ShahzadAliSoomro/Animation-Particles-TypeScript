@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <div className="w-full mx-auto container p-10">
-      <div className="flex justify-between pt-20">
+      <div className="flex justify-between pt-20 flex-wrap gap-6 lg:flex-nowrap lg:gap-0">
         <div className="flex flex-col gap-9">
           <h2 className="text-4xl">Hi There!</h2>
           <h1 className="text-6xl">I'M SHAHZAD ALI</h1>
