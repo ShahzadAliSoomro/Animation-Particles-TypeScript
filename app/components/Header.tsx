@@ -21,7 +21,7 @@ export default function Header() {
             <NavItem icon={<AiOutlineHome />} label="Home" />
             <NavItem icon={<AiOutlineUser />} label="About" />
             <NavItem icon={<AiOutlineFundProjectionScreen />} label="Project" />
-            <NavItem icon={<BiSortDown />} label="Resume" />
+            <NavItem icon={<BiSortDown />} label="Resume" link="/public/ShahzadAli.pdf" />
             <NavItem icon={<AiOutlineContacts />} label="Contact" />
           </div>
          
