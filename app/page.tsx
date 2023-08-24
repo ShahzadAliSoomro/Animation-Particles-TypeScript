@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Project from './components/Project'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 
 export default function Home() {
@@ -16,10 +17,7 @@ export default function Home() {
       <About />
       <Project />
       <Contact />
-    </div>
-
-    <div className='w-full h-screen absolute top-0 left-0'>
-      
+      <Footer />
     </div>
   </div>
   )
