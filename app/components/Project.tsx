@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import {TiSocialGithubCircular, TiSocialDribbbleCircular} from "react-icons/ti";
 
 const Projects = [
   {
@@ -88,12 +89,15 @@ export default function Project() {
             </div>
             <div className="flex justify-center gap-5 pt-3">
               <Link href={project.githubLink}>
-                <button className="bg-green-500 text-white p-2 rounded-lg">
+              
+                <button className="bg-green-500 text-white p-2 rounded-lg flex">
+                <TiSocialGithubCircular className='w-6 h-6' />
                   Github
                 </button>
               </Link>
               <Link href={project.demoLink}>
-                <button className="bg-green-500 text-white p-2 rounded-lg">
+                <button className="bg-green-500 text-white p-2 rounded-lg flex">
+                <TiSocialDribbbleCircular className='w-6 h-6' />
                   Demo
                 </button>
               </Link>

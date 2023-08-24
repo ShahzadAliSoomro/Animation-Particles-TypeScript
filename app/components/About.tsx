@@ -21,7 +21,7 @@ export default function About() {
           </p>
         </div>
         <div className="w-full">
-          <Image src="/hero3.avif" alt="hero" width={500} height={500} />
+          <Image src="/bgg.png" alt="hero" width={500} height={500} />
         </div>
       </div>
     </div>
