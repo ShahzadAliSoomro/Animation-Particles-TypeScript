@@ -22,7 +22,6 @@ export default function Header() {
         <div className="md:hidden pr-3 flex justify-end">
           <button onClick={toggleMobileMenu}>
             <AiOutlineMenu className="w-8 h-8"/>
-            
           </button>
         </div>
         <div className="flex justify-between items-center">
