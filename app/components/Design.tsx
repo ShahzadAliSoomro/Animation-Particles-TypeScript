@@ -20,9 +20,9 @@ export default function Design() {
   const particlesOptions: RecursivePartial<IOptions> = {
     "autoPlay": true,
     "background": {
-    //   "color": {
-    //     "value": "#000"
-    //   },
+      "color": {
+        "value": "#1E293B"
+      },
       "image": "",
       "position": "",
       "repeat": "",
