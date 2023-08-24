@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <div className="fixed w-full z-40">
       <div className="container mx-auto py-4">
-        <div className="md:hidden pr-3 flex justify-end">
+        <div className="md:hidden pr-3 flex justify-end text-white">
           <button onClick={toggleMobileMenu}>
             <AiOutlineMenu className="w-8 h-8"/>
           </button>
