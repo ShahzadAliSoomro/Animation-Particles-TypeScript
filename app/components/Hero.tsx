@@ -5,6 +5,7 @@ import {
   TiSocialTwitterCircular,
   TiSocialFacebookCircular,
   TiSocialGithubCircular,
+  TiSocialInstagramCircular,
 } from "react-icons/ti";
 import Link from "next/link";
 export default function Hero() {
@@ -16,17 +17,20 @@ export default function Hero() {
           <h1 className="text-6xl">I'M SHAHZAD ALI</h1>
           <h2 className="text-4xl pt-10">Web Developer</h2>
           <div className="flex gap-5 cursor-pointer">
-            <Link href="">
+            <Link href="https://github.com/ShahzadAliSoomro">
               <TiSocialGithubCircular className="w-8 h-8" />
             </Link>
-            <Link href="">
+            <Link href="https://www.linkedin.com/in/shahzad-ali-51748122b/">
               <TiSocialLinkedinCircular className="w-8 h-8" />
             </Link>
-            <Link href="">
+            <Link href="https://www.facebook.com/profile.php?id=100067543970671&mibextid=ZbWKwL">
               <TiSocialFacebookCircular className="w-8 h-8" />
             </Link>
-            <Link href="">
+            <Link href="https://twitter.com/Shahzad67656720?t=VTYdy-uo4cClxdvEI_4DiA&s=08">
               <TiSocialTwitterCircular className="w-8 h-8" />
+            </Link>
+            <Link href="https://instagram.com/shahzadhussain1731043?igshid=MzNlNGNkZWQ4Mg==">
+                <TiSocialInstagramCircular className="w-8 h-8" />
             </Link>
           </div>
         </div>
