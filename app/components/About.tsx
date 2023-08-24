@@ -11,13 +11,16 @@ export default function About() {
         <div className="flex flex-col gap-3">
           <h4 className="text-2xl">I'm Shahzad Ali</h4>
           <p className="w-full lg:w-6/12 text-justify">
-            Experienced frontend developer skilled in HTML, CSS, JavaScript,
-            React, Next.js, and Tailwind CSS. Creates responsive and dynamic web
-            applications with a strong grasp of HTML structure, CSS styling, and
-            JavaScript functionality. Proficient in React and Next.js for
-            scalable and performant applications. Utilizes Tailwind CSS for
-            efficient and responsive styling. Offers expertise in the front-end
-            development stack for modern and engaging web experiences.
+            I'm Shahzad, a skilled Web Developer with over 2 years of hands-on
+            experience. Proficient in HTML, CSS, Bootstrap, JavaScript,
+            Typescript, ReactJs, NextJs, Tailwindcss, and API Integration, I
+            create seamless web experiences that captivate users. I prioritize
+            maintainability and code quality as a developer. With a proven track
+            record of developing websites from scratch, I ensure every detail is
+            meticulously crafted. Expect exceptional quality, well-organized
+            source code, and prompt communication for timely updates. Customer
+            satisfaction and transparency are my core values, ensuring a
+            seamless.
           </p>
         </div>
         <div className="w-full">
