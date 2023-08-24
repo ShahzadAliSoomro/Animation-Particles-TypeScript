@@ -34,8 +34,8 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-        <div className="bg-transparent bg-opacity-0">
-          <Image src="/hero3.avif" alt="hero" width={500} height={500} />
+        <div className="bg-transparent">
+          <Image src="/hero3.avif" alt="hero" width={500} height={500} className=""/>
         </div>
       </div>
     </div>
