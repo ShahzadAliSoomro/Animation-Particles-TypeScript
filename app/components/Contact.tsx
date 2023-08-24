@@ -34,17 +34,17 @@ export default function Contact() {
               ></textarea>
             </div>
           </div>
-          <button className="w-full py-3 border-2 border-lime-500 hover:text-white hover:bg-lime-500 rounded-full text-lime-500 font-bold text-lg">
+          <button className="w-full py-3 border-2 border-green-500 hover:text-white hover:bg-green-500 rounded-full text-green-500 font-bold text-lg">
             Send
           </button>
-          <p className="text-gray-500 text-sm font-semibold">
+          <p className="text-white text-sm font-semibold">
             This site is protected by CAPTCHA and the Google{" "}
-            <a href="#" className="text-lime-500">
+            <a href="#" className="text-green-500">
               {" "}
               Privacy Policy{" "}
             </a>
             and{" "}
-            <a href="#" className="text-lime-500">
+            <a href="#" className="text-green-500">
               Terms of Service
             </a>{" "}
             apply.
