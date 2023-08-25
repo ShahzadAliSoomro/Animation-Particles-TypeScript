@@ -113,7 +113,7 @@ export default function Header() {
 
   return (
     <div
-      className={`fixed w-full h-2/4 transition-all duration-300
+      className={`fixed w-full transition-all duration-300
     ${navbarBgColor === "white" ? "bg-white opacity-80" : "bg-transparent"}`}
       style={{ zIndex: 100 }}
     >
@@ -234,9 +234,9 @@ export default function Header() {
            
           </div>
          
-          <div className="w-full flex justify-end">
+          {/* <div className="w-full flex justify-end">
             <Image src="/bgg.png" alt="hero" width={500} height={500} />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
