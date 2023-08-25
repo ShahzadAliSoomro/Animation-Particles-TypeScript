@@ -29,12 +29,35 @@ const texts = [
   },
 ];
 
+const colorOptions = [
+  "bg-green-700",
+  "bg-red-700",
+  "bg-blue-700",
+  "bg-yellow-700",
+  "bg-purple-700",
+  "bg-black",
+];
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [navbarBgColor, setNavbarBgColor] = useState("transparent");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [currentColor, setCurrentColor] = useState("");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomColor =
+        colorOptions[Math.floor(Math.random() * colorOptions.length)];
+      setCurrentColor(randomColor);
+    }, 3000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -193,7 +216,7 @@ export default function Header() {
               navbarBgColor === "white" ? "text-black" : "text-white"
             }`}
           >
-            <p className="border-r-8 border-black h-28"></p>
+            <p className="border-r-8 border-black h-36"></p>
             <div className="flex flex-col">
               <h1 className="text-2xl pl-3 font-bold flex gap-2 items-center">
                 {heading}{" "}
@@ -203,7 +226,7 @@ export default function Header() {
               </h1>
               <p className="text-xl pl-3">{subheading}</p>
               <div className="flex pl-3">
-           <button className="mt-4 px-4 py-2 rounded bg-black text-white">
+           <button className={`mt-6 px-4 py-2 rounded bg-black text-white ${currentColor} shimmer`}>
           Order Now
         </button>
            </div>
