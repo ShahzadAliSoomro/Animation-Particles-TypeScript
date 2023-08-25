@@ -4,7 +4,7 @@ import {SiMinutemailer} from 'react-icons/si';
 
 export default function Contact() {
   return (
-    <div className="w-full container mx-auto">
+    <div className="w-full container mx-auto lg:p-10 p-0">
     <div className="py-14 px-4 md:px-0">
       <div className="w-full mx-auto border-b border-white">
         <h1 className="text-2xl pb-3 text-white">CONTACT US</h1>
