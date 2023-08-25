@@ -187,7 +187,7 @@ export default function Header() {
           isVisible ? "opacity-100" : "opacity-0 hidden"
         }`}
       >
-        <div className="flex justify-between">
+        <div className="flex ">
           <div
             className={`w-full text-lg font-semibold flex items-center ${
               navbarBgColor === "white" ? "text-black" : "text-white"
@@ -197,13 +197,20 @@ export default function Header() {
             <div className="flex flex-col">
               <h1 className="text-2xl pl-3 font-bold flex gap-2 items-center">
                 {heading}{" "}
-                <span className="text-6xl">
+                <span className="text-5xl">
                   {emphasis.slice(0, currentCharIndex + 1)}
                 </span>
               </h1>
               <p className="text-xl pl-3">{subheading}</p>
+              <div className="flex pl-3">
+           <button className="mt-4 px-4 py-2 rounded bg-black text-white">
+          Order Now
+        </button>
+           </div>
             </div>
+           
           </div>
+         
           <div className="w-full flex justify-end">
             <Image src="/bgg.png" alt="hero" width={500} height={500} />
           </div>
