@@ -36,7 +36,7 @@ export default function Header() {
   return (
     <div className={`fixed w-full transition-all duration-300
     ${navbarBgColor === "white" ? "bg-white opacity-90" : "bg-transparent"}`} style={{ zIndex: 100 }}>
-      <div className="container mx-auto py-4 lg:px-6 px-0">
+      <div className="container mx-auto py-4 lg:px-10 px-0">
         <div className={`md:hidden pr-3 flex justify-end ${navbarBgColor === "white" ? "text-black" : "text-white"}`}>
           <button onClick={() => setMobileMenuOpen(prevState => !prevState)}>
             <AiOutlineMenu className="w-8 h-8"/>
