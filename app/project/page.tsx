@@ -1,6 +1,5 @@
 import React from "react";
-import About from "../components/About";
-import Footer from "../components/Footer";
+import Project from "../components/Project";
 
 export default function Page() {
   return (
@@ -9,13 +8,14 @@ export default function Page() {
         <div className="mx-auto container flex justify-center items-center text-center">
           <div className="p-8 space-y-8 text-black">
             <h2 className="lg:text-5xl text-3xl font-bold">
-              Welcome to Our Portfolio
+              Explore Our Portfolio
             </h2>
             <div className="flex justify-center items-center">
               <p className="w-full lg:w-5/12">
-                Explore our latest projects and discover the creativity and
-                innovation that defines our work. We take pride in delivering
-                exceptional solutions tailored to your needs.
+                Browse through our showcased projects and uncover the ingenuity
+                and originality that define our work. We take pride in
+                delivering exceptional solutions tailored to meet your unique
+                requirements.
               </p>
             </div>
             <div className="">
@@ -27,11 +27,9 @@ export default function Page() {
         </div>
       </div>
       <div>
-        <About />
+        <Project />
       </div>
-      {/* <div className='justify-evenly'>
-            <Footer />
-        </div> */}
+     
     </div>
   );
 }
