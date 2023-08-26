@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   TiSocialLinkedinCircular,
@@ -8,14 +9,61 @@ import {
   TiSocialInstagramCircular,
 } from "react-icons/ti";
 import Link from "next/link";
+
+const texts = [
+  {
+    heading: "Looking for",
+    subheading: "NextJS Developer ?",
+    emphasis: "NextJS",
+  },
+  {
+    heading: "Passionate about",
+    subheading: "Web Development ?",
+    emphasis: "Web Development",
+  },
+  {
+    heading: "Ready to build",
+    subheading: "Amazing Websites ?",
+    emphasis: "Amazing Websites",
+  },
+];
 export default function Hero() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentCharIndex, setCurrentCharIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentCharIndex((prevIndex) => {
+        if (prevIndex === texts[currentIndex].emphasis.length - 1) {
+          setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+          return 0;
+        }
+        return prevIndex + 1;
+      });
+    }, 300); // Change character every 100 milliseconds
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [currentIndex, currentCharIndex]);
+
+  const { heading, subheading, emphasis } = texts[currentIndex];
+
   return (
     <div className="w-full mx-auto container p-10">
       <div className="flex justify-between pt-20 flex-wrap gap-6 lg:flex-nowrap lg:gap-0">
         <div className="flex flex-col gap-9">
           <h2 className="text-4xl">Hi There!</h2>
           <h1 className="text-6xl">I'M SHAHZAD ALI</h1>
-          <h2 className="text-4xl pt-10">Web Developer</h2>
+          <div>
+          <h1 className="text-2xl font-bold flex gap-2 items-center">
+                {heading}{" "}
+                <span className="text-5xl">
+                  {emphasis.slice(0, currentCharIndex + 1)}
+                </span>
+              </h1>
+              <p className="text-xl">{subheading}</p>
+              </div>
           <div className="flex gap-5 cursor-pointer">
             <Link href="https://github.com/ShahzadAliSoomro">
               <TiSocialGithubCircular className="w-8 h-8 hover:bg-green-500 rounded-full" />

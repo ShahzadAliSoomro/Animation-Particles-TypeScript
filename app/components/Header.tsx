@@ -83,7 +83,7 @@ export default function Header() {
         }
         return prevIndex + 1;
       });
-    }, 300); // Change character every 100 milliseconds
+    }, 100); // Change character every 100 milliseconds
 
     return () => {
       clearInterval(interval);
