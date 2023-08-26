@@ -59,38 +59,38 @@ export default function Header() {
   }, []);
 
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 100) {
+  //       setIsVisible(true);
+  //     } else {
+  //       setIsVisible(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentCharIndex((prevIndex) => {
-        if (prevIndex === texts[currentIndex].emphasis.length - 1) {
-          setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-          return 0;
-        }
-        return prevIndex + 1;
-      });
-    }, 100); // Change character every 100 milliseconds
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentCharIndex((prevIndex) => {
+  //       if (prevIndex === texts[currentIndex].emphasis.length - 1) {
+  //         setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+  //         return 0;
+  //       }
+  //       return prevIndex + 1;
+  //     });
+  //   }, 100); // Change character every 100 milliseconds
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [currentIndex, currentCharIndex]);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, [currentIndex, currentCharIndex]);
 
-  const { heading, subheading, emphasis } = texts[currentIndex];
+  // const { heading, subheading, emphasis } = texts[currentIndex];
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -205,7 +205,7 @@ export default function Header() {
           </div>
         </div>
       )}
-      <div
+      {/* <div
         className={`hidden md:block w-full container mx-auto p-10 ${
           isVisible ? "opacity-100" : "opacity-0 hidden"
         }`}
@@ -234,11 +234,11 @@ export default function Header() {
            
           </div>
          
-          {/* <div className="w-full flex justify-end">
+          <div className="w-full flex justify-end">
             <Image src="/bgg.png" alt="hero" width={500} height={500} />
-          </div> */}
+          </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
