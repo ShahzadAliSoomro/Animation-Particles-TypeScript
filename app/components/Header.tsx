@@ -56,7 +56,6 @@ export default function Header() {
     };
   }, []);
 
-
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
@@ -65,7 +64,6 @@ export default function Header() {
     setActiveNavItem(label); // Set the clicked navigation item as active
     setMobileMenuOpen(false); // Close mobile menu after clicking
   };
-
 
   const handleScroll = () => {
     if (window.scrollY > 100) {
@@ -104,7 +102,9 @@ export default function Header() {
               navbarBgColor === "white" ? "text-black" : "text-white"
             }`}
           >
-            <p className="-my-7 lg:my-0 pl-3 lg:pl-0">Shahzad</p>
+            <Link href="/">
+              <p className="-my-7 lg:my-0 pl-3 lg:pl-0">Shahzad</p>
+            </Link>
           </div>
           <div className="hidden md:flex gap-6 font-semibold">
             <NavItem
@@ -113,7 +113,7 @@ export default function Header() {
               link="/"
               navbarBgColor={navbarBgColor}
               activeNavItem={activeNavItem}
-          handleNavItemClick={handleNavItemClick} // Pass the function here
+              handleNavItemClick={handleNavItemClick} // Pass the function here
             />
             <NavItem
               icon={<AiOutlineUser />}
@@ -121,7 +121,7 @@ export default function Header() {
               link="/about"
               navbarBgColor={navbarBgColor}
               activeNavItem={activeNavItem}
-          handleNavItemClick={handleNavItemClick} // Pass the function here
+              handleNavItemClick={handleNavItemClick} // Pass the function here
             />
             <NavItem
               icon={<AiOutlineFundProjectionScreen />}
@@ -129,7 +129,7 @@ export default function Header() {
               link="/project"
               navbarBgColor={navbarBgColor}
               activeNavItem={activeNavItem}
-          handleNavItemClick={handleNavItemClick} // Pass the function here
+              handleNavItemClick={handleNavItemClick} // Pass the function here
             />
             <NavItem
               icon={<BiSortDown />}
@@ -137,7 +137,7 @@ export default function Header() {
               link="/public/ShahzadAli.pdf"
               navbarBgColor={navbarBgColor}
               activeNavItem={activeNavItem}
-          handleNavItemClick={handleNavItemClick} // Pass the function here
+              handleNavItemClick={handleNavItemClick} // Pass the function here
             />
             <NavItem
               icon={<AiOutlineContacts />}
@@ -145,19 +145,19 @@ export default function Header() {
               link="/contact"
               navbarBgColor={navbarBgColor}
               activeNavItem={activeNavItem}
-          handleNavItemClick={handleNavItemClick} // Pass the function here
+              handleNavItemClick={handleNavItemClick} // Pass the function here
             />
           </div>
         </div>
       </div>
       {mobileMenuOpen && (
-        <div className="fixed top-12 left-end w-full bg-slate-800 ">
+        <div className="fixed top-12 left-end w-full bg-slate-800">
           <div className="mt-2 py-2 px-4 rounded flex flex-col gap-2 text-xl">
             <NavItem
               icon={<AiOutlineHome />}
               label="Home"
               link="/"
-              navbarBgColor={navbarBgColor}
+              // navbarBgColor={navbarBgColor}
               activeNavItem={activeNavItem} // Pass activeNavItem to the NavItem component
               handleNavItemClick={handleNavItemClick} // Pass the click handler
             />
@@ -165,7 +165,7 @@ export default function Header() {
               icon={<AiOutlineUser />}
               label="About"
               link="/about"
-              navbarBgColor={navbarBgColor}
+              // navbarBgColor={navbarBgColor}
               activeNavItem={activeNavItem} // Pass activeNavItem to the NavItem component
               handleNavItemClick={handleNavItemClick} // Pass the click handler
             />
@@ -173,7 +173,7 @@ export default function Header() {
               icon={<AiOutlineFundProjectionScreen />}
               label="Project"
               link="/project"
-              navbarBgColor={navbarBgColor}
+              // navbarBgColor={navbarBgColor}
               activeNavItem={activeNavItem} // Pass activeNavItem to the NavItem component
               handleNavItemClick={handleNavItemClick} // Pass the click handler
             />
@@ -181,7 +181,7 @@ export default function Header() {
               icon={<BiSortDown />}
               label="Resume"
               link="/public/ShahzadAli.pdf"
-              navbarBgColor={navbarBgColor}
+              // navbarBgColor={navbarBgColor}
               activeNavItem={activeNavItem} // Pass activeNavItem to the NavItem component
               handleNavItemClick={handleNavItemClick} // Pass the click handler
             />
@@ -189,7 +189,7 @@ export default function Header() {
               icon={<AiOutlineContacts />}
               label="Contact"
               link="/contact"
-              navbarBgColor={navbarBgColor}
+              // navbarBgColor={navbarBgColor}
               activeNavItem={activeNavItem} // Pass activeNavItem to the NavItem component
               handleNavItemClick={handleNavItemClick} // Pass the click handler
             />
@@ -234,7 +234,14 @@ export default function Header() {
   );
 }
 
-function NavItem({ icon, label, link, navbarBgColor, activeNavItem, handleNavItemClick }: any) {
+function NavItem({
+  icon,
+  label,
+  link,
+  navbarBgColor,
+  activeNavItem,
+  handleNavItemClick,
+}: any) {
   const navItemClassName = `flex gap-1 items-center cursor-pointer transition duration-300 ${
     navbarBgColor === "white" ? "text-black" : "text-white"
   } ${activeNavItem === label ? "border-b-2 border-blue-500" : ""}`; // Add border class for active item
@@ -256,7 +263,9 @@ function NavItem({ icon, label, link, navbarBgColor, activeNavItem, handleNavIte
           style={navItemStyle}
         >
           {icon}
-          <p className={navbarBgColor === "white" ? "text-black" : "text-white"}>
+          <p
+            className={navbarBgColor === "white" ? "text-black" : "text-white"}
+          >
             {label}
           </p>
         </a>
@@ -274,7 +283,9 @@ function NavItem({ icon, label, link, navbarBgColor, activeNavItem, handleNavIte
           <div className="flex gap-1 items-center">
             {icon}
             <p
-              className={navbarBgColor === "white" ? "text-black" : "text-white"}
+              className={
+                navbarBgColor === "white" ? "text-black" : "text-white"
+              }
             >
               {label}
             </p>
