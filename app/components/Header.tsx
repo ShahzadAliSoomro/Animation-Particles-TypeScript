@@ -92,7 +92,14 @@ export default function Header() {
             navbarBgColor === "white" ? "text-black" : "text-white"
           }`}
         >
-          <button onClick={() => setMobileMenuOpen((prevState) => !prevState)}>
+          <button
+            onClick={() => {
+              setMobileMenuOpen((prevState) => !prevState);
+              if (mobileMenuOpen) {
+                setActiveNavItem(""); // Reset activeNavItem when closing the menu
+              }
+            }}
+          >
             <AiOutlineMenu className="w-8 h-8" />
           </button>
         </div>
