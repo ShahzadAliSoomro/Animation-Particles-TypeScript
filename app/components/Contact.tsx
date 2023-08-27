@@ -1,6 +1,8 @@
 import React from 'react';
 import {IoLocationOutline, IoCallOutline} from 'react-icons/io5';
 import {SiMinutemailer} from 'react-icons/si';
+import {AiOutlineMail} from 'react-icons/ai';
+import {HiOutlineMail} from 'react-icons/hi';
 
 export default function Contact() {
   return (
@@ -55,20 +57,20 @@ export default function Contact() {
           <h3 className="text-xl font-semibold text-white pt-5 ">
             {`Better yet, see us in person!`}
           </h3>
-          <div className='flex gap-1 text-lg'>
-            <IoLocationOutline className="w-10 h-10"/>
+          <div className='flex gap-1 text-lg items-center'>
+            <IoLocationOutline className="w-8 h-8"/>
             <p className="text-white w-72">House No.1562 Sector I10/1 Main Double Road, Islamabad</p>
           </div>
-          <div className='flex gap-1 text-lg'>
-            <IoCallOutline className="w-10 h-10"/>
+          <div className='flex gap-1 text-lg items-center'>
+            <IoCallOutline className="w-8 h-8"/>
             <div>
             <p className="text-white">Phone: +92 304-1797211</p>
             <p className="text-white ">Whatsaap No: 03041797211</p>
             </div>
           </div>
-          <div className='flex gap-1 text-lg'>
-            <SiMinutemailer className="w-10 h-10 bg-transparent opacity-50 bg-slate-50 rounded-full"/>
-            <p className="text-white ">Email: info@yoursite.com</p>
+          <div className='flex gap-1 text-lg items-center'>
+            <HiOutlineMail className="w-8 h-8"/>
+            <p className="text-white ">Email: shahzadhussain1731043@gmail.com</p>
           </div>
         </div>
       </div>
