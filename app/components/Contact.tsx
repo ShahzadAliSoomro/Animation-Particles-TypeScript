@@ -57,18 +57,18 @@ export default function Contact() {
           <h3 className="text-xl font-semibold text-white pt-5 ">
             {`Better yet, see us in person!`}
           </h3>
-          <div className='flex gap-1 text-lg items-center'>
+          <div className='flex gap-1 lg:text-lg text-sm items-center'>
             <IoLocationOutline className="w-8 h-8"/>
             <p className="text-white w-72">House No.1562 Sector I10/1 Main Double Road, Islamabad</p>
           </div>
-          <div className='flex gap-1 text-lg items-center'>
+          <div className='flex gap-1 lg:text-lg text-sm items-center'>
             <IoCallOutline className="w-8 h-8"/>
             <div>
             <p className="text-white">Phone: +92 304-1797211</p>
             <p className="text-white ">Whatsaap No: 03041797211</p>
             </div>
           </div>
-          <div className='flex gap-1 text-lg items-center'>
+          <div className='flex gap-1 lg:text-lg text-sm items-center'>
             <HiOutlineMail className="w-8 h-8"/>
             <p className="text-white ">Email: shahzadhussain1731043@gmail.com</p>
           </div>

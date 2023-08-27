@@ -3,7 +3,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="w-full mx-auto container p-10">
+    <div className="w-full mx-auto container lg:p-10 p-4">
       <div className="text-4xl text-center pt-10">
         <h1>About</h1>
       </div>
