@@ -112,30 +112,40 @@ export default function Header() {
               label="Home"
               link="/"
               navbarBgColor={navbarBgColor}
+              activeNavItem={activeNavItem}
+          handleNavItemClick={handleNavItemClick} // Pass the function here
             />
             <NavItem
               icon={<AiOutlineUser />}
               label="About"
               link="/about"
               navbarBgColor={navbarBgColor}
+              activeNavItem={activeNavItem}
+          handleNavItemClick={handleNavItemClick} // Pass the function here
             />
             <NavItem
               icon={<AiOutlineFundProjectionScreen />}
               label="Project"
               link="/project"
               navbarBgColor={navbarBgColor}
+              activeNavItem={activeNavItem}
+          handleNavItemClick={handleNavItemClick} // Pass the function here
             />
             <NavItem
               icon={<BiSortDown />}
               label="Resume"
               link="/public/ShahzadAli.pdf"
               navbarBgColor={navbarBgColor}
+              activeNavItem={activeNavItem}
+          handleNavItemClick={handleNavItemClick} // Pass the function here
             />
             <NavItem
               icon={<AiOutlineContacts />}
               label="Contact"
               link="/contact"
               navbarBgColor={navbarBgColor}
+              activeNavItem={activeNavItem}
+          handleNavItemClick={handleNavItemClick} // Pass the function here
             />
           </div>
         </div>
