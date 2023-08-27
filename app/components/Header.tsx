@@ -41,9 +41,7 @@ const colorOptions = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [navbarBgColor, setNavbarBgColor] = useState("transparent");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentCharIndex, setCurrentCharIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeNavItem, setActiveNavItem] = useState(""); // State to track active navigation item
   const [currentColor, setCurrentColor] = useState("");
 
   useEffect(() => {
@@ -59,42 +57,15 @@ export default function Header() {
   }, []);
 
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY > 100) {
-  //       setIsVisible(true);
-  //     } else {
-  //       setIsVisible(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentCharIndex((prevIndex) => {
-  //       if (prevIndex === texts[currentIndex].emphasis.length - 1) {
-  //         setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-  //         return 0;
-  //       }
-  //       return prevIndex + 1;
-  //     });
-  //   }, 100); // Change character every 100 milliseconds
-
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, [currentIndex, currentCharIndex]);
-
-  // const { heading, subheading, emphasis } = texts[currentIndex];
-
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+
+  const handleNavItemClick = (label: any) => {
+    setActiveNavItem(label); // Set the clicked navigation item as active
+    setMobileMenuOpen(false); // Close mobile menu after clicking
+  };
+
 
   const handleScroll = () => {
     if (window.scrollY > 100) {
@@ -177,30 +148,40 @@ export default function Header() {
               label="Home"
               link="/"
               navbarBgColor={navbarBgColor}
+              activeNavItem={activeNavItem} // Pass activeNavItem to the NavItem component
+              handleNavItemClick={handleNavItemClick} // Pass the click handler
             />
             <NavItem
               icon={<AiOutlineUser />}
               label="About"
               link="/about"
               navbarBgColor={navbarBgColor}
+              activeNavItem={activeNavItem} // Pass activeNavItem to the NavItem component
+              handleNavItemClick={handleNavItemClick} // Pass the click handler
             />
             <NavItem
               icon={<AiOutlineFundProjectionScreen />}
               label="Project"
               link="/project"
               navbarBgColor={navbarBgColor}
+              activeNavItem={activeNavItem} // Pass activeNavItem to the NavItem component
+              handleNavItemClick={handleNavItemClick} // Pass the click handler
             />
             <NavItem
               icon={<BiSortDown />}
               label="Resume"
               link="/public/ShahzadAli.pdf"
               navbarBgColor={navbarBgColor}
+              activeNavItem={activeNavItem} // Pass activeNavItem to the NavItem component
+              handleNavItemClick={handleNavItemClick} // Pass the click handler
             />
             <NavItem
               icon={<AiOutlineContacts />}
               label="Contact"
               link="/contact"
               navbarBgColor={navbarBgColor}
+              activeNavItem={activeNavItem} // Pass activeNavItem to the NavItem component
+              handleNavItemClick={handleNavItemClick} // Pass the click handler
             />
           </div>
         </div>
@@ -243,10 +224,10 @@ export default function Header() {
   );
 }
 
-function NavItem({ icon, label, link, navbarBgColor }: any) {
-  const navItemClassName = `flex gap-1 items-center cursor-pointer transition duration-300 hover:text-blue-500 ${
+function NavItem({ icon, label, link, navbarBgColor, activeNavItem, handleNavItemClick }: any) {
+  const navItemClassName = `flex gap-1 items-center cursor-pointer transition duration-300 ${
     navbarBgColor === "white" ? "text-black" : "text-white"
-  }`;
+  } ${activeNavItem === label ? "border-b-2 border-blue-500" : ""}`; // Add border class for active item
   const navItemStyle = {
     backgroundColor:
       navbarBgColor === "white" ? "rgba(255, 255, 255, 0.1)" : "transparent",
@@ -274,7 +255,11 @@ function NavItem({ icon, label, link, navbarBgColor }: any) {
   } else {
     // For other links, use the original Link component
     return (
-      <div className={navItemClassName} style={navItemStyle}>
+      <div
+        className={navItemClassName}
+        style={navItemStyle}
+        onClick={() => handleNavItemClick(label)} // Handle click to change active item
+      >
         <Link href={link}>
           <div className="flex gap-1 items-center">
             {icon}
