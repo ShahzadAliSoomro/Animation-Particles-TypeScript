@@ -84,7 +84,7 @@ export default function Project() {
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div>
+            <div className="pt-3">
               <p> {project.text}</p>
             </div>
             <div className="flex justify-center gap-5 pt-3">
