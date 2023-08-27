@@ -26,7 +26,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div>
+      <div className="text-white">
         <About />
       </div>
       {/* <div className='justify-evenly'>
