@@ -196,40 +196,6 @@ export default function Header() {
           </div>
         </div>
       )}
-      {/* <div
-        className={`hidden md:block w-full container mx-auto p-10 ${
-          isVisible ? "opacity-100" : "opacity-0 hidden"
-        }`}
-      >
-        <div className="flex ">
-          <div
-            className={`w-full text-lg font-semibold flex items-center ${
-              navbarBgColor === "white" ? "text-black" : "text-white"
-            }`}
-          >
-            <p className="border-r-8 border-black h-36"></p>
-            <div className="flex flex-col">
-              <h1 className="text-2xl pl-3 font-bold flex gap-2 items-center">
-                {heading}{" "}
-                <span className="text-5xl">
-                  {emphasis.slice(0, currentCharIndex + 1)}
-                </span>
-              </h1>
-              <p className="text-xl pl-3">{subheading}</p>
-              <div className="flex pl-3">
-           <button className={`mt-6 px-4 py-2 rounded bg-black text-white ${currentColor} shimmer`}>
-          Order Now
-        </button>
-           </div>
-            </div>
-           
-          </div>
-         
-          <div className="w-full flex justify-end">
-            <Image src="/bgg.png" alt="hero" width={500} height={500} />
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }
