@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="bg-slate-800">
-      <div className="w-full container mx-auto bg-transparent px-2 lg:px-0">
+      <div className="w-full container mx-auto bg-transparent px-2 md:px-4">
         <div className="flex justify-between text-white p-3 flex-wrap gap-4 lg:flex-nowrap lg:gap-0">
           <div className="text-lg">
             <p>Designed and Developed by Shahzad Ali</p>
