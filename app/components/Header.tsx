@@ -251,18 +251,41 @@ function NavItem({ icon, label, link, navbarBgColor }: any) {
     backgroundColor:
       navbarBgColor === "white" ? "rgba(255, 255, 255, 0.1)" : "transparent",
   };
-  return (
-    <div className={navItemClassName} style={navItemStyle}>
-      <Link href={link}>
-        <div className="flex gap-1 items-center">
+
+  // Check if the link is for the resume PDF
+  const isResumeLink = link === "/public/ShahzadAli.pdf";
+
+  if (isResumeLink) {
+    return (
+      <div className={navItemClassName} style={navItemStyle}>
+        <a
+          href={link}
+          download="ShahzadAli.pdf" // Set the download attribute
+          className="flex gap-1 items-center" // No need for hover styles for direct download links
+          style={navItemStyle}
+        >
           {icon}
-          <p
-            className={navbarBgColor === "white" ? "text-black" : "text-white"}
-          >
+          <p className={navbarBgColor === "white" ? "text-black" : "text-white"}>
             {label}
           </p>
-        </div>
-      </Link>
-    </div>
-  );
+        </a>
+      </div>
+    );
+  } else {
+    // For other links, use the original Link component
+    return (
+      <div className={navItemClassName} style={navItemStyle}>
+        <Link href={link}>
+          <div className="flex gap-1 items-center">
+            {icon}
+            <p
+              className={navbarBgColor === "white" ? "text-black" : "text-white"}
+            >
+              {label}
+            </p>
+          </div>
+        </Link>
+      </div>
+    );
+  }
 }
