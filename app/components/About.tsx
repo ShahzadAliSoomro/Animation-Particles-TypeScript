@@ -33,7 +33,7 @@ export default function About() {
               </div>
               <div className="flex gap-14">
                 <p className="font-semibold">Email:</p>
-                <p>shahzadhussain1731043@gmail.com</p>
+                <p className="">shahzadhussain1731043@gmail.com</p>
               </div>
               <div className="flex gap-14">
                 <p className="font-semibold">From:</p>
