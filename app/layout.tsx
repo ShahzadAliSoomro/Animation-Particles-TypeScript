@@ -4,9 +4,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "./components/Header";
-import Design from "./components/Design";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import Footer from "./components/Footer";
 // ..
 // AOS.init();
 
@@ -38,9 +38,7 @@ export default function RootLayout({
         
         <Header />
         {children}
-        
-        {/* <Design /> */}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

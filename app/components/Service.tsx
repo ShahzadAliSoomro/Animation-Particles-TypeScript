@@ -55,7 +55,8 @@ export default function Service() {
           {services.map((service) => (
             <div
               key={service.id}
-              className='border flex justify-center items-center hover:bg-green-500 hover:shadow-lg hover:scale-105 transition-all duration-500'
+              className='border flex justify-center items-center hover:bg-green-500 hover:shadow-lg 
+              hover:scale-105 transition-all duration-500'
             >
               <div className='flex flex-col justify-center items-center p-8 gap-4'>
                 <div className='bg-green-500 p-2 rounded-full'>{service.icon}</div>
