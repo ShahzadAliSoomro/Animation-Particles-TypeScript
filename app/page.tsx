@@ -11,7 +11,7 @@ import Footer from './components/Footer'
 export default function Home() {
   return (
     
-    <div className='w-full text-white relative'>
+    <div className='w-full text-white'>
     <Hero />
     <About />
     <Project />
