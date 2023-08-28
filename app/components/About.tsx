@@ -3,7 +3,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="w-full mx-auto container lg:p-10 p-4">
+    <div className="w-full mx-auto container lg:p-10 p-4" data-aos="fade-down-left">
       <div className="text-4xl text-center pt-10">
         <h1>About</h1>
       </div>
@@ -25,7 +25,7 @@ export default function About() {
             seamless.
           </p>
         </div>
-        <div className="w-full">
+        <div className="w-full" >
           <Image src="/pro2.png" alt="hero" width={600} height={600} className="rounded-full" />
         </div>
       </div>

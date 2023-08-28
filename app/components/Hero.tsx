@@ -50,7 +50,7 @@ export default function Hero() {
   const { heading, subheading, emphasis } = texts[currentIndex];
 
   return (
-    <div className="w-full mx-auto container lg:p-10 p-4">
+    <div className="w-full mx-auto container lg:p-10 p-4" >
       <div className="flex justify-between pt-20 flex-wrap gap-6 lg:flex-nowrap lg:gap-0">
         <div className="flex flex-col gap-9">
           <h2 className="text-4xl">Hi There!</h2>
