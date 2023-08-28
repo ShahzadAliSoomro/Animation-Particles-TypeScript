@@ -45,7 +45,7 @@ const services = [
 export default function Service() {
   return (
     <div className='w-full bg-[#1E293B] p-4'>
-      <div className='max-w-[1440px] mx-auto px-10'>
+      <div className='max-w-[1440px] mx-auto lg:px-10 px-0'>
         <div className="text-4xl flex flex-col justify-center items-center pt-10 gap-1">
           <h1 className="">Service</h1>
           <p className="border-b-2 w-32 border-green-500"></p>
