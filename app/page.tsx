@@ -10,15 +10,14 @@ import Footer from './components/Footer'
 
 export default function Home() {
   return (
-    <div className='w-full h-screen text-white relative '>
-    <div className=''>
-      
-      <Hero />
-      <About />
-      <Project />
-      <Contact />
-      <Footer />
-    </div>
+    
+    <div className='w-full h-screen text-white relative'>
+    <Hero />
+    <About />
+    <Project />
+    <Contact />
+    <Footer />
   </div>
+
   )
 }
