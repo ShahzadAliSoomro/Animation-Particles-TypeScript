@@ -9,6 +9,7 @@ import {
   TiSocialInstagramCircular,
 } from "react-icons/ti";
 import Link from "next/link";
+import Design from "./Design";
 
 const texts = [
   {
@@ -50,7 +51,9 @@ export default function Hero() {
   const { heading, subheading, emphasis } = texts[currentIndex];
 
   return (
-    <div className="w-full mx-auto container lg:p-10 p-4" >
+    
+    <div className="max-w-[1440px] mx-auto container lg:p-10 p-4" >
+      
       <div className="flex justify-between pt-20 flex-wrap gap-6 lg:flex-nowrap lg:gap-0">
         <div className="flex flex-col gap-9">
           <h2 className="text-4xl">Hi There!</h2>
@@ -86,6 +89,7 @@ export default function Hero() {
           <Image src="/hero3.avif" alt="hero" width={500} height={500} className=""/>
         </div>
       </div>
+      <Design />
     </div>
   );
 }

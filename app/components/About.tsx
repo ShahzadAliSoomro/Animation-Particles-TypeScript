@@ -3,7 +3,8 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="w-full mx-auto container lg:p-10 p-4" data-aos="fade-down-left">
+    <div className="w-full bg-[#1E293B]">
+    <div className="max-w-[1440px] mx-auto container lg:p-10 p-4">
       <div className="text-4xl text-center pt-10">
         <h1>About</h1>
       </div>
@@ -30,5 +31,7 @@ export default function About() {
         </div>
       </div>
     </div>
+  </div>
   );
+  
 }
