@@ -76,10 +76,10 @@ export default function Project() {
       <div className="text-4xl text-center pt-10 font-semibold">
         <h1 className="">PORTFOLIO</h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 pt-5">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 pt-5" >
         {Projects.map((project) => (
-          <div key={project.id} className="flex flex-col border shadow p-3">
-            <div className="w-full ">
+          <div key={project.id} className="flex flex-col border shadow p-3" >
+            <div className="w-full " data-aos="fade-up">
               <video controls width={700} height={600}>
                 <source src={project.video} type="video/mp4" />
                 Your browser does not support the video tag.
