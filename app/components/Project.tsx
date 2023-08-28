@@ -71,7 +71,8 @@ const Projects = [
 
 export default function Project() {
   return (
-    <div className="w-full mx-auto container lg:p-10 p-4" data-aos="fade-up" data-aos-duration="3000">
+    <div className="w-full bg-[#1E293B]">
+    <div className="max-w-[1440px] mx-auto container lg:p-10 p-4">
       <div className="text-4xl text-center pt-10 font-semibold">
         <h1 className="">PORTFOLIO</h1>
       </div>
@@ -105,6 +106,7 @@ export default function Project() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }
