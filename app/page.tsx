@@ -6,6 +6,7 @@ import About from './components/About'
 import Project from './components/Project'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Service from './components/Service'
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
     <div className='w-full text-white'>
     <Hero />
     <About />
+    <Service />
     <Project />
     <Contact />
     <Footer />

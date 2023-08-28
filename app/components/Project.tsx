@@ -91,13 +91,13 @@ export default function Project() {
             <div className="flex justify-center gap-5 pt-3">
               <Link href={project.githubLink}>
               
-                <button className="bg-green-500 text-white p-2 rounded-lg flex">
+                <button className="bg-green-500 text-white p-2 rounded-lg flex hover:bg-green-500 hover:shadow-lg hover:scale-110 transition-all duration-500">
                 <TiSocialGithubCircular className='w-6 h-6' />
                   Github
                 </button>
               </Link>
               <Link href={project.demoLink}>
-                <button className="bg-green-500 text-white p-2 rounded-lg flex">
+                <button className="bg-green-500 text-white p-2 rounded-lg flex hover:bg-green-500 hover:shadow-lg hover:scale-110 transition-all duration-500">
                 <TiSocialDribbbleCircular className='w-6 h-6' />
                   Demo
                 </button>

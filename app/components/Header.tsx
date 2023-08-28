@@ -86,7 +86,7 @@ export default function Header() {
     ${navbarBgColor === "white" ? "bg-white opacity-80" : "bg-transparent"}`}
       style={{ zIndex: 100 }}
     >
-      <div className="container mx-auto py-4 lg:px-10 px-0">
+      <div className="max-w-[1440px] mx-auto py-4 lg:px-10 px-0">
         <div
           className={`md:hidden pr-3 flex justify-end ${
             navbarBgColor === "white" ? "text-black" : "text-white"
