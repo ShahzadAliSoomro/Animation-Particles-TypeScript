@@ -7,6 +7,7 @@ import Project from './components/Project'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Service from './components/Service'
+import Skills from './components/Skills'
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
     <Hero />
     <About />
     <Service />
+    <Skills />
     <Project />
     <Contact />
     {/* <Footer /> */}
