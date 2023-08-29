@@ -11,10 +11,10 @@ export default function About() {
         <p className="border-b-2 w-44 border-green-500"></p>
       </div>
       <div className="w-full flex flex-col lg:flex-row pt-20 lg:space-x-10">
-          <div className="w-full lg:w-6/12 mb-10 lg:mb-0" data-aos="fade-down-right">
+          <div className="w-full lg:w-6/12 mb-10 lg:mb-0" data-aos="fade-right">
             <Image src="/prr.avif" alt="hero" width={500} height={500} className="mx-auto" />
           </div>
-          <div className="w-full lg:w-6/12 flex flex-col gap-6" data-aos="fade-down-left">
+          <div className="w-full lg:w-6/12 flex flex-col gap-6" data-aos="fade-left">
             <h3 className="text-4xl font-semibold">Hi There! I'm Shahzad Ali</h3>
             <h5 className="text-2xl text-green-500">Web Developer</h5>
             <p className="text-lg text-gray-400">

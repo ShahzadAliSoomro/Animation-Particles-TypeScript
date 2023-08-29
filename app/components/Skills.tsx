@@ -101,7 +101,7 @@ export default function Skills() {
                         <div className="mb-4 h-4 relative sm:w-96 w-72 rounded-full overflow-hidden bg-gray-200">
                           <div
                             className="h-full bg-yellow-400 sm:bg-green-500 absolute" 
-                            style={{ width: `${skill.percentage}%` }}
+                            style={{ width: `${skill.percentage}%` }} data-aos="fade-right"
                           ></div>
                         </div>
                       </div>
