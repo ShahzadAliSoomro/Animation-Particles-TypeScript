@@ -14,7 +14,7 @@ export default function About() {
           <div className="w-full lg:w-6/12 mb-10 lg:mb-0" data-aos="fade-right">
             <Image src="/prr.avif" alt="hero" width={500} height={500} className="mx-auto" />
           </div>
-          <div className="w-full lg:w-6/12 flex flex-col gap-6" data-aos="fade-left">
+          <div className="w-full lg:w-6/12 flex flex-col gap-6" data-aos="lg:fade-left fade-right">
             <h3 className="text-4xl font-semibold">Hi There! I'm Shahzad Ali</h3>
             <h5 className="text-2xl text-green-500">Web Developer</h5>
             <p className="text-lg text-gray-400">
