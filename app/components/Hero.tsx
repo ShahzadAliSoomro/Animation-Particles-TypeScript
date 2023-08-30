@@ -80,7 +80,8 @@ export default function Hero() {
   const { heading, subheading, emphasis } = texts[currentIndex];
 
   return (
-    <div className="max-w-[1440px] mx-auto container lg:p-10 p-4">
+    <div className="w-full relative ">
+    <div className="max-w-[1440px] mx-auto container lg:p-10 p-4 ">
       <div className="flex justify-between pt-20 flex-wrap gap-6 lg:flex-nowrap lg:gap-0">
         <div className="flex flex-col gap-9">
           <h2 className="text-4xl">Hi There!</h2>
@@ -95,8 +96,8 @@ export default function Hero() {
             <p className="lg:text-xl text-lg">{subheading}</p>
           </div>
 
-          <div className="flex cursor-pointer">
-            <div className="flex gap-5 items-center border p-2 rounded-full">
+          <div className="absolute top-full left-[580px] flex cursor-pointer">
+            <div className="flex gap-3 items-center border p-2 rounded-full w-[500px]">
               {iconData.map((icon, index) => (
                 <Link key={index} href={icon.link} className="relative group">
                   <div
@@ -120,17 +121,27 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="">
+        {/* <div className="absolute top-12 right-0">
           <Image
             src="/hero3.avif"
             alt="hero"
             width={500}
             height={500}
-            className="w-[400px] h-[400px]"
+            className="w-[600px] h-[550px]"
           />
-        </div>
+        </div> */}
       </div>
       <Design />
+    </div>
+    <div className="absolute top-12 right-0">
+          <Image
+            src="/hero3.avif"
+            alt="hero"
+            width={500}
+            height={500}
+            className="w-[900px] h-[550px]"
+          />
+        </div>
     </div>
   );
 }
