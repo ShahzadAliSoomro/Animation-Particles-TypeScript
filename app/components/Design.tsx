@@ -21,7 +21,7 @@ export default function Design() {
     "autoPlay": true,
     "background": {
       "color": {
-        "value": "#1E293B"
+        "value": "#011A26"
       },
       "image": "",
       "position": "",

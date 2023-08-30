@@ -135,11 +135,11 @@ export default function Hero() {
     </div>
     <div className="absolute top-12 right-0">
           <Image
-            src="/hero3.avif"
+            src="/p-4.avif"
             alt="hero"
-            width={500}
-            height={500}
-            className="w-[900px] h-[550px]"
+            width={2500}
+            height={2500}
+            className="w-[900px] h-[520px] object-cover"
           />
         </div>
     </div>
