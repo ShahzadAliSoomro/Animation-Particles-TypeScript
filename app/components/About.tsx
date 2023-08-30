@@ -3,7 +3,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="w-full bg-[#1E293B]">
+    <div className="w-full bg-[#011A26] ">
       <div className="max-w-[1340px] mx-auto container lg:p-10 p-4">
         <div className="text-4xl flex flex-col justify-center items-center pt-10 gap-1">
           <h1 className="">About Me</h1>
