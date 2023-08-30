@@ -27,7 +27,7 @@ export default function RootLayout({
     // Check if running in a browser environment before initializing AOS
     if (typeof window !== 'undefined') {
       AOS.init({
-        duration: 800,
+        duration: 500,
         once: false,
       });
     }
