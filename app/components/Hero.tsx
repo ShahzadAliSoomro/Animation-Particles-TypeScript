@@ -141,6 +141,41 @@ export default function Hero() {
             height={1000}
             className="w-[600px] h-[605px] object-cover absolute top-0 right-[150px]"
           />
+
+<div className="flex justify-between px-32 pt-10">
+          <Image
+            src="/react.png"
+            alt="react"
+            width={100}
+            height={100}
+            className="w-[100px] h-[100px] rounded-full animate-spin"
+          />
+          <Image
+            src="/nodejs.png"
+            alt="node"
+            width={100}
+            height={100}
+            className="w-[100px] h-[100px] rounded animate-spin"
+          />
+        </div>
+        <div className="flex justify-between px-32 pt-[380px]">
+          <Image
+            src="/nextjs.png"
+            alt="next"
+            width={160}
+            height={100}
+            className="w-[160px] h-[100px] object-cover rounded-full animate-spin"
+          />
+          <Image
+            src="/express.png"
+            alt="express"
+            width={100}
+            height={100}
+            className="w-[100px] h-[100px] object-cover animate-spin"
+          />
+        </div>
+
+          
         </div>
     </div>
   );
