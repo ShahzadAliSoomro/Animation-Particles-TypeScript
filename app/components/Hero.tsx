@@ -133,13 +133,13 @@ export default function Hero() {
       </div>
       <Design />
     </div>
-    <div className="absolute top-14 right-0 hidden md:block">
+    <div className="w-[900px] h-[575px] absolute top-14 right-0 hidden md:block bg-[#011A26] ">
           <Image
-            src="/p-4.avif"
+            src="/vec-d.png"
             alt="hero"
-            width={2500}
-            height={2500}
-            className="w-[900px] h-[575px] object-cover"
+            width={1000}
+            height={1000}
+            className="w-[600px] h-[605px] object-cover absolute top-0 right-[150px]"
           />
         </div>
     </div>
