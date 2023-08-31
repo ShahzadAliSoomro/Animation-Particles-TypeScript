@@ -145,7 +145,7 @@ export default function Hero() {
          
          {showIcons && (
           <>
-            <div className="flex justify-between px-32 pt-10">
+            <div className="flex justify-between px-40 pt-16">
               <div data-aos="fade-up-left" data-aos-duration="2500">
               <Image
                 src="/react.png"
@@ -155,17 +155,17 @@ export default function Hero() {
                 className="w-[80px] h-[80px] rounded-full animate-fadeInFromCenter animate-spin"
               />
               </div>
-              <div data-aos="fade-up-right" data-aos-duration="2500" className="mr-24">
+              <div data-aos="fade-up-right" data-aos-duration="2500" className="mr-[82px]">
               <Image
                 src="/nodejs.png"
                 alt="node"
                 width={100}
                 height={100}
-                className="w-[75px] h-[75px] rounded animate-fadeInFromCenter animate-spin"
+                className="w-[73px] h-[73px] rounded animate-fadeInFromCenter animate-spin"
               />
               </div>
             </div>
-            <div className="flex justify-between px-20 ">
+            <div className="flex justify-between px-20">
               <div data-aos="fade-up-left" data-aos-duration="2500">
               <Image
                 src="/javascript.png"
@@ -175,53 +175,53 @@ export default function Hero() {
                 className="w-[90px] h-[90px] rounded-full animate-fadeInFromCenter animate-spin"
               />
               </div>
-              <div data-aos="fade-up-right" data-aos-duration="2500" className="mr-24">
+              <div data-aos="fade-up-right" data-aos-duration="2500" className="mr-[85px]">
               <Image
                 src="/tailwind.png"
                 alt="node"
                 width={100}
                 height={100}
-                className="w-[75px] h-[75px] rounded-full animate-fadeInFromCenter animate-spin"
+                className="w-[73px] h-[73px] rounded-full animate-fadeInFromCenter animate-spin"
               />
               </div>
             </div>
             <div className="flex justify-between px-12">
               <div data-aos="fade-up-left" data-aos-duration="2500">
               <Image
-                src="/javascript.png"
+                src="/html.png"
                 alt="react"
                 width={100}
                 height={100}
-                className="w-[90px] h-[90px] rounded-full animate-fadeInFromCenter animate-spin"
+                className="w-[80px] h-[80px] rounded-full animate-fadeInFromCenter animate-spin"
               />
               </div>
-              <div data-aos="fade-up-right" data-aos-duration="2500" className="mr-24 rounded-e-full">
+              <div data-aos="fade-up-right" data-aos-duration="2500" className="mr-[80px] rounded-e-full">
               <Image
-                src="/tailwind.png"
+                src="/typescript.png"
                 alt="node"
                 width={100}
                 height={100}
-                className="w-[75px] h-[75px] animate-fadeInFromCenter animate-spin"
+                className="w-[73px] h-[73px] animate-fadeInFromCenter animate-spin"
               />
               </div>
             </div>
-            <div className="flex justify-between">
-              <div data-aos="fade-down-left" data-aos-duration="2500">
+            <div className="flex justify-between -mx-3">
+              <div data-aos="fade-up-left" data-aos-duration="2500">
               <Image
                 src="/nextjs.png"
                 alt="next"
                 width={160}
                 height={100}
-                className="w-[130px] h-[100px] object-cover rounded-full animate-fadeInFromCenter animate-spin"
+                className="w-[140px] h-[100px] object-cover rounded-full animate-fadeInFromCenter animate-spin"
               />
               </div>
-              <div data-aos="fade-down-right" data-aos-duration="2500" className="pr-28">
+              <div data-aos="fade-up-right" data-aos-duration="2500" className="pr-28">
               <Image
                 src="/express.png"
                 alt="express"
                 width={100}
                 height={100}
-                className="w-[90px] h-[90px] object-cover animate-fadeInFromCenter animate-spin" 
+                className="w-[83px] h-[83px] object-cover animate-fadeInFromCenter animate-spin" 
               />
               </div>
             </div>
