@@ -32,6 +32,17 @@ export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [hoveredIcon, setHoveredIcon] = useState<number | null>(null);
+  const [showIcons, setShowIcons] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowIcons(true);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
   const iconData = [
     {
@@ -95,7 +106,7 @@ export default function Hero() {
               </h1>
               <p className="lg:text-xl text-lg">{subheading}</p>
             </div>
-            <div className="absolute top-[480px] left-[580px] cursor-pointer hidden md:block">
+            <div className="absolute top-[480px] left-[690px] cursor-pointer hidden md:block">
               <div className="flex gap-3 items-center border p-2 rounded-full w-[500px]">
                 {iconData.map((icon, index) => (
                   <Link key={index} href={icon.link} className="relative group">
@@ -123,47 +134,99 @@ export default function Hero() {
         </div>
         <Design />
       </div>
-      <div className="w-[900px] h-[575px] absolute top-14 right-0 hidden md:block bg-[#011A26] ">
+      <div className="w-[900px] h-[575px] absolute top-14 right-0 hidden md:block  ">
         <Image
           src="/vec-d.png"
           alt="hero"
           width={1000}
           height={1000}
-          className="w-[600px] h-[605px] object-cover absolute top-0 right-[150px]"
+          className="w-[700px] h-[605px] object-cover absolute top-0 right-[150px]"
         />
-
-        <div className="flex justify-between px-32 pt-10">
-          <Image
-            src="/react.png"
-            alt="react"
-            width={100}
-            height={100}
-            className="w-[100px] h-[100px] rounded-full animate-spin"
-          />
-          <Image
-            src="/nodejs.png"
-            alt="node"
-            width={100}
-            height={100}
-            className="w-[100px] h-[100px] rounded animate-spin"
-          />
-        </div>
-        <div className="flex justify-between px-32 pt-[380px]">
-          <Image
-            src="/nextjs.png"
-            alt="next"
-            width={160}
-            height={100}
-            className="w-[160px] h-[100px] object-cover rounded-full animate-spin"
-          />
-          <Image
-            src="/express.png"
-            alt="express"
-            width={100}
-            height={100}
-            className="w-[100px] h-[100px] object-cover animate-spin"
-          />
-        </div>
+         
+         {showIcons && (
+          <>
+            <div className="flex justify-between px-32 pt-10">
+              <div data-aos="fade-up-left" data-aos-duration="2500">
+              <Image
+                src="/react.png"
+                alt="react"
+                width={100}
+                height={100}
+                className="w-[80px] h-[80px] rounded-full animate-fadeInFromCenter animate-spin"
+              />
+              </div>
+              <div data-aos="fade-up-right" data-aos-duration="2500" className="mr-24">
+              <Image
+                src="/nodejs.png"
+                alt="node"
+                width={100}
+                height={100}
+                className="w-[75px] h-[75px] rounded animate-fadeInFromCenter animate-spin"
+              />
+              </div>
+            </div>
+            <div className="flex justify-between px-20 ">
+              <div data-aos="fade-up-left" data-aos-duration="2500">
+              <Image
+                src="/javascript.png"
+                alt="react"
+                width={100}
+                height={100}
+                className="w-[90px] h-[90px] rounded-full animate-fadeInFromCenter animate-spin"
+              />
+              </div>
+              <div data-aos="fade-up-right" data-aos-duration="2500" className="mr-24">
+              <Image
+                src="/tailwind.png"
+                alt="node"
+                width={100}
+                height={100}
+                className="w-[75px] h-[75px] rounded-full animate-fadeInFromCenter animate-spin"
+              />
+              </div>
+            </div>
+            <div className="flex justify-between px-12">
+              <div data-aos="fade-up-left" data-aos-duration="2500">
+              <Image
+                src="/javascript.png"
+                alt="react"
+                width={100}
+                height={100}
+                className="w-[90px] h-[90px] rounded-full animate-fadeInFromCenter animate-spin"
+              />
+              </div>
+              <div data-aos="fade-up-right" data-aos-duration="2500" className="mr-24 rounded-e-full">
+              <Image
+                src="/tailwind.png"
+                alt="node"
+                width={100}
+                height={100}
+                className="w-[75px] h-[75px] animate-fadeInFromCenter animate-spin"
+              />
+              </div>
+            </div>
+            <div className="flex justify-between">
+              <div data-aos="fade-down-left" data-aos-duration="2500">
+              <Image
+                src="/nextjs.png"
+                alt="next"
+                width={160}
+                height={100}
+                className="w-[130px] h-[100px] object-cover rounded-full animate-fadeInFromCenter animate-spin"
+              />
+              </div>
+              <div data-aos="fade-down-right" data-aos-duration="2500" className="pr-28">
+              <Image
+                src="/express.png"
+                alt="express"
+                width={100}
+                height={100}
+                className="w-[90px] h-[90px] object-cover animate-fadeInFromCenter animate-spin" 
+              />
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

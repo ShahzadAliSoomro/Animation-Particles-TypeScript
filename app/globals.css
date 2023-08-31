@@ -47,4 +47,37 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* use our components Hero */
+
+@keyframes fadeInFromCenter {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Your existing styles for the layout */
+/* ... */
+
+.animate-fadeInFromCenter {
+  animation: fadeInFromCenter 1s ease-in-out;
+}
+
+.animate-spin {
+  animation: spin 3s linear infinite;
+}
+
 
