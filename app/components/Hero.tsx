@@ -139,18 +139,18 @@ export default function Hero() {
             className="w-full lg:w-6/12 
           "
           >
-            <div className="flex justify-end">
+            <div className="flex lg:justify-end justify-center">
               <div className="relative">
                 <Image
                   src="/vec-d.png"
                   alt="vector"
                   width={1000}
                   height={1000}
-                  className="lg:w-[580px] lg:h-[580px] object-cover"
+                  className="w-full lg:w-[580px] lg:h-[580px] object-cover"
                 />
               </div>
               {showIcons && (
-                <div className="absolute top-[100%] md:top-[15%] lg:top-[200px] left-[10%] md:left-[10%] lg:left-[63%]">
+                <div className="absolute top-[70%] md:top-[15%] lg:top-[200px] left-[10%] md:left-[10%] lg:left-[63%]">
                 <div className="flex flex-col gap-5">
                   <div className="flex md:flex-row lg:flex-row gap-[70%] md:gap-[20%] lg:gap-[30%] px-[10%] md:px-[10%] lg:px-[15%]">
                     <div data-aos="fade-up-left" data-aos-duration="2500">
@@ -226,106 +226,7 @@ export default function Hero() {
                   </div>
                 </div>
               </div>
-                // <div className="absolute lg:top-[20%]  -right-[10%]">
-                //   <div className="flex flex-col gap-5">
-                //     <div className="flex gap-[300px] px-[130px]">
-                //       <div data-aos="fade-up-left" data-aos-duration="2500">
-                //         <Image
-                //           src="/react.png"
-                //           alt="react"
-                //           width={100}
-                //           height={100}
-                //           className="w-[20%] md:w-[15%] lg:w-[15%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
-                //         />
-                //       </div>
-                //       <div
-                //         data-aos="fade-up-right"
-                //         data-aos-duration="2500"
-                //         className="mr-[100px]"
-                //       >
-                //         <Image
-                //           src="/nodejs.png"
-                //           alt="node"
-                //           width={100}
-                //           height={100}
-                //           className="w-[15%] md:w-[12%] lg:w-[12%] h-auto rounded animate-fadeInFromCenter animate-spin"
-                //         />
-                //       </div>
-                //     </div>
-                //     <div className="flex gap-[390px] px-[80px]">
-                //       <div data-aos="fade-up-left" data-aos-duration="2500">
-                //         <Image
-                //           src="/javascript.png"
-                //           alt="react"
-                //           width={100}
-                //           height={100}
-                //           className="w-[90px] h-[90px] rounded-full animate-fadeInFromCenter animate-spin"
-                //         />
-                //       </div>
-                //       <div
-                //         data-aos="fade-up-right"
-                //         data-aos-duration="2500"
-                //         className=""
-                //       >
-                //         <Image
-                //           src="/tailwind.png"
-                //           alt="node"
-                //           width={100}
-                //           height={100}
-                //           className="w-[73px] h-[73px] rounded-full animate-fadeInFromCenter animate-spin"
-                //         />
-                //       </div>
-                //     </div>
-                //     <div className="flex gap-[450px] px-[60px]">
-                //       <div data-aos="fade-up-left" data-aos-duration="2500">
-                //         <Image
-                //           src="/html.png"
-                //           alt="react"
-                //           width={100}
-                //           height={100}
-                //           className="w-[80px] h-[80px] rounded-full animate-fadeInFromCenter animate-spin"
-                //         />
-                //       </div>
-                //       <div
-                //         data-aos="fade-up-right"
-                //         data-aos-duration="2500"
-                //         className="rounded-e-full "
-                //       >
-                //         <Image
-                //           src="/typescript.png"
-                //           alt="node"
-                //           width={100}
-                //           height={100}
-                //           className="w-[73px] h-[73px] animate-fadeInFromCenter animate-spin"
-                //         />
-                //       </div>
-                //     </div>
-                //     {/* <div className="flex gap-[550px]">
-                //       <div data-aos="fade-up-left" data-aos-duration="2500">
-                //         <Image
-                //           src="/nextjs.png"
-                //           alt="next"
-                //           width={160}
-                //           height={100}
-                //           className="w-[140px] h-[100px] object-cover rounded-full animate-fadeInFromCenter animate-spin"
-                //         />
-                //       </div>
-                //       <div
-                //         data-aos="fade-up-right"
-                //         data-aos-duration="2500"
-                //         className=""
-                //       >
-                //         <Image
-                //           src="/express.png"
-                //           alt="express"
-                //           width={100}
-                //           height={100}
-                //           className="w-[83px] h-[83px] object-cover animate-fadeInFromCenter animate-spin"
-                //         />
-                //       </div>
-                //     </div> */}
-                //   </div>
-                // </div>
+              
               )}
             </div>
           </div>
