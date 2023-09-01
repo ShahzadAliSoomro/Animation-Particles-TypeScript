@@ -136,8 +136,7 @@ export default function Hero() {
           </div>
 
           <div
-            className="w-full lg:w-6/12 
-          "
+            className="w-full lg:w-6/12"
           >
             <div className="flex lg:justify-end justify-center">
               <div className="relative">
@@ -150,53 +149,55 @@ export default function Hero() {
                 />
               </div>
               {showIcons && (
-                <div className="absolute top-[70%] md:top-[15%] lg:top-[200px] left-[10%] md:left-[10%] lg:left-[63%]">
+                <div className="absolute top-[70%] md:top-[15%] lg:top-[200px] left-[10%] md:left-[10%] lg:left-[55%]">
                 <div className="flex flex-col gap-5">
-                  <div className="flex md:flex-row lg:flex-row gap-[70%] md:gap-[20%] lg:gap-[30%] px-[10%] md:px-[10%] lg:px-[15%]">
-                    <div data-aos="fade-up-left" data-aos-duration="2500">
+                  <div className="flex gap-[70%] md:gap-[20%] lg:gap-[250px] px-[10%] md:px-[10%] lg:px-[50px]">
+                    {/* <div className="flex gap-[200px]"> */}
+                    <div data-aos="fade-up-left" data-aos-duration="2500" className="">
                       <Image
                         src="/react.png"
                         alt="react"
                         width={100}
                         height={100}
-                        className="w-[100%] md:w-[15%] lg:w-[100%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                        className="w-[100%] md:w-[15%] lg:w-[60%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     <div
                       data-aos="fade-up-right"
                       data-aos-duration="2500"
-                      className="mr-[0%] ml-6 md:ml-0 lg:ml-0 md:mr-[15%] lg:mr-[20%]"
+                      className="mr-[0%] ml-6 md:ml-0 lg:ml-0 md:mr-[15%] lg:mr-[0%]"
                     >
                       <Image
                         src="/nodejs.png"
                         alt="node"
                         width={100}
                         height={100}
-                        className="w-[100%] md:w-[12%] lg:w-[100%] h-auto rounded animate-fadeInFromCenter animate-spin"
+                        className="w-[100%] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
                       />
                     </div>
+                    {/* </div> */}
                   </div>
-                  <div className="flex justify-between md:flex-row lg:flex-row gap-[70%] md:gap-[20%] lg:gap-[30%] px-[0%] md:px-[10%] lg:px-[15%]">
+                  <div className="flex justify-between md:flex-row lg:flex-row gap-[70%] md:gap-[20%] lg:gap-[250px] px-[0%] md:px-[10%] lg:px-[15%]">
                     <div data-aos="fade-up-left" data-aos-duration="2500" className="ml-[4%]">
                       <Image
                         src="/javascript.png"
                         alt="javaScript"
                         width={100}
                         height={100}
-                        className="w-[100%] md:w-[18%] lg:w-[100%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                        className="w-[100%] md:w-[18%] lg:w-[80%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     <div
                       data-aos="fade-up-right"
                       data-aos-duration="2500"
-                      className="mr-[0%] ml-[5%] md:ml-0 lg:ml-0 md:mr-[15%] lg:mr-[20%]"
+                      className="mr-[0%] ml-[5%] md:ml-0 lg:ml-0 md:mr-[15%] lg:mr-[0%]"
                     >
                       <Image
                         src="/tailwind.png"
                         alt="tailwind"
                         width={100}
                         height={100}
-                        className="w-[90%] md:w-[12%] lg:w-[100%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                        className="w-[90%] md:w-[12%] lg:w-[70%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                   </div>
