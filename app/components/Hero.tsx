@@ -50,27 +50,27 @@ export default function Hero() {
     // icon data
     {
       link: "https://github.com/ShahzadAliSoomro",
-      icon: <TiSocialGithubCircular className="w-12 h-12" />,
+      icon: <TiSocialGithubCircular className="lg:w-12 w-10 lg:h-12 h-10" />,
       text: "Github",
     },
     {
       link: "https://www.linkedin.com/in/shahzad-ali-51748122b/",
-      icon: <TiSocialLinkedinCircular className="w-12 h-12" />,
+      icon: <TiSocialLinkedinCircular className="lg:w-12 w-10 lg:h-12 h-10" />,
       text: "LinkedIn",
     },
     {
       link: "https://www.facebook.com/profile.php?id=100067543970671&mibextid=ZbWKwL",
-      icon: <TiSocialFacebookCircular className="w-12 h-12" />,
+      icon: <TiSocialFacebookCircular className="lg:w-12 w-10 lg:h-12 h-10" />,
       text: "Facebook",
     },
     {
       link: "https://twitter.com/Shahzad67656720?t=VTYdy-uo4cClxdvEI_4DiA&s=08",
-      icon: <TiSocialTwitterCircular className="w-12 h-12" />,
+      icon: <TiSocialTwitterCircular className="lg:w-12 w-10 lg:h-12 h-10" />,
       text: "Twitter",
     },
     {
       link: "https://instagram.com/shahzadhussain1731043?igshid=MzNlNGNkZWQ4Mg==",
-      icon: <TiSocialInstagramCircular className="w-12 h-12" />,
+      icon: <TiSocialInstagramCircular className="lg:w-12 w-10 lg:h-12 h-10" />,
       text: "Instagram",
     },
   ];
@@ -150,7 +150,7 @@ export default function Hero() {
                 />
               </div>
               {showIcons && (
-                <div className="absolute top-[88%] md:top-[15%] lg:top-[200px] left-[10%] md:left-[10%] lg:left-[350px]">
+                <div className="absolute top-[69%] md:top-[15%] lg:top-[200px] left-[10%] md:left-[10%] lg:left-[63%]">
                 <div className="flex flex-col gap-5">
                   <div className="flex md:flex-row lg:flex-row gap-[70%] md:gap-[20%] lg:gap-[30%] px-[10%] md:px-[10%] lg:px-[15%]">
                     <div data-aos="fade-up-left" data-aos-duration="2500">
@@ -159,7 +159,7 @@ export default function Hero() {
                         alt="react"
                         width={100}
                         height={100}
-                        className="w-[100%] md:w-[15%] lg:w-[15%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                        className="w-[100%] md:w-[15%] lg:w-[100%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     <div
@@ -172,7 +172,7 @@ export default function Hero() {
                         alt="node"
                         width={100}
                         height={100}
-                        className="w-[100%] md:w-[12%] lg:w-[12%] h-auto rounded animate-fadeInFromCenter animate-spin"
+                        className="w-[100%] md:w-[12%] lg:w-[100%] h-auto rounded animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                   </div>
@@ -183,7 +183,7 @@ export default function Hero() {
                         alt="javaScript"
                         width={100}
                         height={100}
-                        className="w-[100%] md:w-[18%] lg:w-[18%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                        className="w-[100%] md:w-[18%] lg:w-[100%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     <div
@@ -196,7 +196,7 @@ export default function Hero() {
                         alt="tailwind"
                         width={100}
                         height={100}
-                        className="w-[90%] md:w-[12%] lg:w-[12%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                        className="w-[90%] md:w-[12%] lg:w-[100%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                   </div>
@@ -207,7 +207,7 @@ export default function Hero() {
                         alt="react"
                         width={100}
                         height={100}
-                        className="w-[38%] md:w-[15%] lg:w-[15%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                        className="w-[38%] md:w-[15%] lg:w-[100%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     <div
@@ -220,7 +220,7 @@ export default function Hero() {
                         alt="node"
                         width={100}
                         height={100}
-                        className="w-[35%] md:w-[12%] lg:w-[12%] h-auto ml-[80%] animate-fadeInFromCenter animate-spin"
+                        className="w-[35%] md:w-[12%] lg:w-[100%] h-auto ml-[80%] animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                   </div>
