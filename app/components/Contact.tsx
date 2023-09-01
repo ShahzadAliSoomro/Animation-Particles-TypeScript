@@ -16,8 +16,8 @@ export default function Contact() {
               Fill out the contact form and shahzad will contact you directly.
             </h3>
             <form
-              action="https://getform.io/f/35a57839-3ffc-417a-84e0-1bffdaf53474"
-              method="POST"
+              // action="https://getform.io/f/35a57839-3ffc-417a-84e0-1bffdaf53474"
+              // method="POST"
               className="flex flex-col gap-4"
             >
               <div>
