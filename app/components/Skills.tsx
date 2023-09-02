@@ -81,8 +81,8 @@ export default function Skills() {
           <h1 className="text-white">SKILLS</h1>
           <div className="border-b-2 w-32 border-green-500"></div>
         </div>
-        <div className="w-full flex flex-col sm:flex-row justify-center gap-16 mt-10 ">
-          <div className="lg:w-[500px] w-[340px] lg:h-[500px] h-[340px] lg:ml-44 ml-0  ">
+        <div className="w-full flex flex-col sm:flex-row justify-center gap-5 lg:gap-16 mt-10 ">
+          <div className="w-full lg:w-[500px] lg:h-[500px] lg:ml-44 ml-0  ">
             <Image src="/prr.avif" alt="hero" width={500} height={500} className="mx-auto" />
           </div>
           <div className="w-full sm:w-1/2 flex pt-9 lg:pt-0">
@@ -98,7 +98,7 @@ export default function Skills() {
                           {skill.name}{" "}
                           {/* <span className="text-xs text-yellow-400">{skill.percentage}%</span> */}
                         </h1>
-                        <div className="mb-4 h-4 relative sm:w-96 w-72 rounded-full overflow-hidden bg-gray-200">
+                        <div className="mb-4 h-4 relative w-72 lg:w-72 rounded-full overflow-hidden bg-gray-200">
                           <div
                             className="h-full bg-yellow-400 sm:bg-green-500 absolute" 
                             style={{ width: `${skill.percentage}%` }} data-aos="fade-right"
