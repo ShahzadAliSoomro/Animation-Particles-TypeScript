@@ -96,7 +96,7 @@ export default function Hero() {
   return (
     <div className="w-full">
       <div className="max-w-[1440px] mx-auto container lg:p-10 p-4">
-        <div className="flex justify-between pt-24 flex-wrap lg:flex-nowrap gap-5">
+        <div className="flex justify-between pt-24 xl:pt-10 flex-wrap lg:flex-nowrap gap-5">
           <div className="w-full lg:w-6/12">
             <div className="flex flex-col gap-12 lg:pt-10 pt-0">
               <h2 className="text-4xl">Hi There!</h2>
@@ -104,13 +104,13 @@ export default function Hero() {
               <div>
                 <h1 className="lg:text-2xl text-sm font-bold flex gap-2 items-center">
                   {heading}{" "}
-                  <span className="lg:text-5xl text-xl">
+                  <span className="lg:text-5xl xl:text-3xl text-xl">
                     {emphasis.slice(0, currentCharIndex + 1)}
                   </span>
                 </h1>
                 <p className="lg:text-xl text-lg">{subheading}</p>
               </div>
-              <div className="md:flex md:gap-3 items-center border flex p-2 rounded-full w-full md:w-[500px]">
+              <div className="md:flex md:gap-3 items-center border flex p-2 rounded-full w-full md:w-[430px]">
                 {iconData.map((icon, index) => (
                   <Link key={index} href={icon.link} className="relative group">
                     <div
@@ -149,9 +149,10 @@ export default function Hero() {
                 />
               </div>
               {showIcons && (
-                <div className="absolute top-[70%] md:top-[15%] lg:top-[200px] left-[10%] md:left-[10%] lg:left-[55%]">
+                <div className="absolute top-[70%] md:top-[15%] lg:top-[200px] xl:top-[150px] left-[10%] md:left-[20%] lg:left-[55%] xl:left-[53%] 
+                ">
                 <div className="flex flex-col gap-5">
-                  <div className="flex gap-[70%] md:gap-[20%] lg:gap-[250px] px-[10%] md:px-[10%] lg:px-[50px]">
+                  <div className="flex gap-[70%] md:gap-[20%] lg:gap-[280px] xl:gap-[200px] px-[10%] md:px-[10%] lg:px-[50px] xl:px-[45px] ">
                     {/* <div className="flex gap-[200px]"> */}
                     <div data-aos="fade-up-left" data-aos-duration="2500" className="">
                       <Image
@@ -177,54 +178,60 @@ export default function Hero() {
                     </div>
                     {/* </div> */}
                   </div>
-                  <div className="flex justify-between md:flex-row lg:flex-row gap-[70%] md:gap-[20%] lg:gap-[250px] px-[0%] md:px-[10%] lg:px-[15%]">
-                    <div data-aos="fade-up-left" data-aos-duration="2500" className="ml-[4%]">
+                  <div className="flex gap-[70%] md:gap-[20%] lg:gap-[380px] xl:gap-[280px] px-[10%] md:px-[10%] lg:px-[0px] xl:px-[10px]">
+                    {/* <div className="flex gap-[200px]"> */}
+                    <div data-aos="fade-up-left" data-aos-duration="2500" className="">
                       <Image
-                        src="/javascript.png"
-                        alt="javaScript"
-                        width={100}
-                        height={100}
-                        className="w-[100%] md:w-[18%] lg:w-[80%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                       src="/javascript.png"
+                       alt="javaScript"
+                       width={100}
+                       height={100}
+                        className="w-[100%] md:w-[15%] lg:w-[60%] xl:w-[65%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     <div
                       data-aos="fade-up-right"
                       data-aos-duration="2500"
-                      className="mr-[0%] ml-[5%] md:ml-0 lg:ml-0 md:mr-[15%] lg:mr-[0%]"
+                      className="mr-[0%] ml-6 md:ml-0 lg:ml-0 md:mr-[15%] lg:mr-[0%]"
                     >
                       <Image
-                        src="/tailwind.png"
-                        alt="tailwind"
-                        width={100}
-                        height={100}
-                        className="w-[90%] md:w-[12%] lg:w-[70%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                          src="/tailwind.png"
+                          alt="tailwind"
+                          width={100}
+                          height={100}
+                        className="w-[100%] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
                       />
                     </div>
+                    {/* </div> */}
                   </div>
-                  <div className="flex md:flex-row lg:flex-row gap-[40%] md:gap-[20%] lg:gap-[30%] px-[0%] md:px-[10%] lg:px-[15%]">
-                    <div data-aos="fade-up-left" data-aos-duration="2500">
+                  
+                  <div className="flex gap-[70%] md:gap-[20%] lg:gap-[420px] xl:gap-[320px] px-[10%] md:px-[10%] lg:px-[0px] xl:px-[0px]">
+                    {/* <div className="flex gap-[200px]"> */}
+                    <div data-aos="fade-up-left" data-aos-duration="2500" className="">
                       <Image
-                        src="/html.png"
-                        alt="react"
-                        width={100}
-                        height={100}
-                        className="w-[38%] md:w-[15%] lg:w-[100%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                       src="/html.png"
+                       alt="react"
+                       width={100}
+                       height={100}
+                        className="w-[100%] md:w-[15%] lg:w-[60%] xl:w-[60%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     <div
                       data-aos="fade-up-right"
                       data-aos-duration="2500"
-                      className=""
+                      className="mr-[0%] ml-6 md:ml-0 lg:ml-0 md:mr-[15%] lg:mr-[0%]"
                     >
                       <Image
-                        src="/typescript.png"
-                        alt="node"
-                        width={100}
-                        height={100}
-                        className="w-[35%] md:w-[12%] lg:w-[100%] h-auto ml-[80%] animate-fadeInFromCenter animate-spin"
+                         src="/typescript.png"
+                         alt="node"
+                         width={100}
+                         height={100}
+                        className="w-[100%] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
                       />
                     </div>
+                    {/* </div> */}
                   </div>
+                
                 </div>
               </div>
               
