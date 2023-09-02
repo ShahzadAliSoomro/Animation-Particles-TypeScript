@@ -149,10 +149,10 @@ export default function Hero() {
                 />
               </div>
               {showIcons && (
-                <div className="absolute top-[70%] md:top-[15%] lg:top-[200px] xl:top-[150px] left-[10%] md:left-[20%] lg:left-[55%] xl:left-[53%] 
+                <div className="absolute top-[100%] md:top-[15%] lg:top-[200px] xl:top-[150px] left-[10%] md:left-[20%] lg:left-[55%] xl:left-[53%] 2xl:left-[57%]
                 ">
                 <div className="flex flex-col gap-5">
-                  <div className="flex gap-[70%] md:gap-[20%] lg:gap-[280px] xl:gap-[200px] px-[10%] md:px-[10%] lg:px-[50px] xl:px-[45px] ">
+                  <div className="flex gap-[65%] md:gap-[20%] lg:gap-[280px] xl:gap-[200px] px-[10%] md:px-[10%] lg:px-[50px] xl:px-[45px] ">
                     {/* <div className="flex gap-[200px]"> */}
                     <div data-aos="fade-up-left" data-aos-duration="2500" className="">
                       <Image
@@ -160,7 +160,7 @@ export default function Hero() {
                         alt="react"
                         width={100}
                         height={100}
-                        className="w-[100%] md:w-[15%] lg:w-[60%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                        className="w-[300px] md:w-[15%] lg:w-[60%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     <div
@@ -173,7 +173,7 @@ export default function Hero() {
                         alt="node"
                         width={100}
                         height={100}
-                        className="w-[100%] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
+                        className="w-[300px] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     {/* </div> */}
