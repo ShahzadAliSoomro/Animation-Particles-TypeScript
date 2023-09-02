@@ -145,14 +145,14 @@ export default function Hero() {
                   alt="vector"
                   width={1000}
                   height={1000}
-                  className="w-full lg:w-[580px] lg:h-[580px] object-cover"
+                  className="w-[500px] lg:w-[580px] lg:h-[580px] object-cover"
                 />
               </div>
               {showIcons && (
-                <div className="absolute top-[100%] md:top-[15%] lg:top-[200px] xl:top-[150px] left-[10%] md:left-[20%] lg:left-[55%] xl:left-[53%] 2xl:left-[57%]
+                <div className="absolute hidden md:block top-[100%] md:top-[15%] lg:top-[200px] xl:top-[150px] left-[10%] md:left-[20%] lg:left-[55%] xl:left-[53%] 2xl:left-[57%]
                 ">
                 <div className="flex flex-col gap-5">
-                  <div className="flex gap-[65%] md:gap-[20%] lg:gap-[280px] xl:gap-[200px] px-[10%] md:px-[10%] lg:px-[50px] xl:px-[45px] ">
+                  <div className="flex  gap-[65%] md:gap-[20%] lg:gap-[280px] xl:gap-[200px] px-[10%] md:px-[10%] lg:px-[50px] xl:px-[45px] ">
                     {/* <div className="flex gap-[200px]"> */}
                     <div data-aos="fade-up-left" data-aos-duration="2500" className="">
                       <Image
@@ -234,6 +234,7 @@ export default function Hero() {
                 
                 </div>
               </div>
+              
               
               )}
             </div>
