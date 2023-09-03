@@ -80,4 +80,13 @@ body {
   animation: spin 3s linear infinite;
 }
 
+.emphasis {
+  font-size: 2rem; /* Adjust the font size as needed */
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out; /* Add a smooth transition effect */
+}
+
+.emphasis.hidden {
+  opacity: 0;
+}
 

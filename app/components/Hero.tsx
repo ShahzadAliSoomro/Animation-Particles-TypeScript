@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+
 import {
   TiSocialLinkedinCircular,
   TiSocialTwitterCircular,
@@ -35,6 +36,7 @@ export default function Hero() {
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [hoveredIcon, setHoveredIcon] = useState<number | null>(null);
   const [showIcons, setShowIcons] = useState(false);
+  const [isOpening, setIsOpening] = useState(true);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -74,24 +76,52 @@ export default function Hero() {
       text: "Instagram",
     },
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentCharIndex((prevIndex) => {
-        if (prevIndex === texts[currentIndex].emphasis.length - 1) {
-          setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-          return 0;
-        }
-        return prevIndex + 1;
-      });
-    }, 100);
+      if (isOpening) {
+        setCurrentCharIndex((prevIndex) => {
+          if (prevIndex === texts[currentIndex].emphasis.length - 1) {
+            setIsOpening(false);
+            return prevIndex;
+          }
+          return prevIndex + 1;
+        });
+      } else {
+        setCurrentCharIndex((prevIndex) => {
+          if (prevIndex === 0) {
+            setIsOpening(true);
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+            return 0;
+          }
+          return prevIndex - 1;
+        });
+      }
+    }, 200);
 
     return () => {
       clearInterval(interval);
     };
-  }, [currentIndex, currentCharIndex]);
+  }, [currentIndex, currentCharIndex, isOpening]);
 
   const { heading, subheading, emphasis } = texts[currentIndex];
+  const displayedText = emphasis.substring(0, currentCharIndex + 1);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentCharIndex((prevIndex) => {
+  //       if (prevIndex === texts[currentIndex].emphasis.length - 1) {
+  //         setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+  //         return 0;
+  //       }
+  //       return prevIndex + 1;
+  //     });
+  //   }, 200);
+
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, [currentIndex, currentCharIndex]);
+
+  // const { heading, subheading, emphasis } = texts[currentIndex];
 
   return (
     <div className="w-full">
@@ -105,7 +135,8 @@ export default function Hero() {
                 <h1 className="lg:text-2xl text-sm font-bold flex gap-2 items-center">
                   {heading}{" "}
                   <span className="lg:text-5xl xl:text-3xl text-xl">
-                    {emphasis.slice(0, currentCharIndex + 1)}
+                    {/* {emphasis.slice(0, currentCharIndex + 1)} */}
+                    {displayedText}
                   </span>
                 </h1>
                 <p className="lg:text-xl text-lg">{subheading}</p>
@@ -136,10 +167,10 @@ export default function Hero() {
           </div>
 
           <div
-            className="w-full lg:w-6/12"
+            className="w-full lg:w-6/12 relative"
           >
             <div className="flex lg:justify-end justify-center">
-              <div className="relative">
+              <div className="">
                 <Image
                   src="/vec-d.png"
                   alt="vector"
@@ -149,10 +180,10 @@ export default function Hero() {
                 />
               </div>
               {showIcons && (
-                <div className="absolute hidden md:block top-[100%] md:top-[15%] lg:top-[200px] xl:top-[150px] left-[10%] md:left-[20%] lg:left-[55%] xl:left-[53%] 2xl:left-[57%]
+                <div className="absolute top-[53%] md:top-[15%] lg:top-[200px] xl:top-[15%] left-[32%] md:left-[30%] lg:left-[55%] xl:left-[7%] 2xl:top-[15%] 2xl:left-[20%]
                 ">
-                <div className="flex flex-col gap-5">
-                  <div className="flex  gap-[65%] md:gap-[20%] lg:gap-[280px] xl:gap-[200px] px-[10%] md:px-[10%] lg:px-[50px] xl:px-[45px] ">
+                <div className="flex flex-col lg:gap-5 xl:gap-5 2xl:gap-5 gap-1">
+                  <div className="flex gap-[40px] md:gap-[20%] lg:gap-[280px] xl:gap-[200px] px-[10%] md:px-[10%] lg:px-[50px] xl:px-[45px]">
                     {/* <div className="flex gap-[200px]"> */}
                     <div data-aos="fade-up-left" data-aos-duration="2500" className="">
                       <Image
@@ -160,7 +191,7 @@ export default function Hero() {
                         alt="react"
                         width={100}
                         height={100}
-                        className="w-[300px] md:w-[15%] lg:w-[60%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                        className="w-[30px] md:w-[15%] lg:w-[60%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     <div
@@ -173,12 +204,12 @@ export default function Hero() {
                         alt="node"
                         width={100}
                         height={100}
-                        className="w-[300px] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
+                        className="w-[30px] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     {/* </div> */}
                   </div>
-                  <div className="flex gap-[70%] md:gap-[20%] lg:gap-[380px] xl:gap-[280px] px-[10%] md:px-[10%] lg:px-[0px] xl:px-[10px]">
+                  <div className="flex gap-[40px] md:gap-[20%] lg:gap-[380px] xl:gap-[280px] px-[10%] md:px-[10%] lg:px-[0px] xl:px-[10px]">
                     {/* <div className="flex gap-[200px]"> */}
                     <div data-aos="fade-up-left" data-aos-duration="2500" className="">
                       <Image
@@ -186,7 +217,7 @@ export default function Hero() {
                        alt="javaScript"
                        width={100}
                        height={100}
-                        className="w-[100%] md:w-[15%] lg:w-[60%] xl:w-[65%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                        className="w-[25px] md:w-[15%] lg:w-[60%] xl:w-[65%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     <div
@@ -199,13 +230,13 @@ export default function Hero() {
                           alt="tailwind"
                           width={100}
                           height={100}
-                        className="w-[100%] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
+                        className="w-[20px] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     {/* </div> */}
                   </div>
                   
-                  <div className="flex gap-[70%] md:gap-[20%] lg:gap-[420px] xl:gap-[320px] px-[10%] md:px-[10%] lg:px-[0px] xl:px-[0px]">
+                  <div className="flex gap-[40px] md:gap-[20%] lg:gap-[420px] xl:gap-[320px] px-[10%] md:px-[10%] lg:px-[0px] xl:px-[0px]">
                     {/* <div className="flex gap-[200px]"> */}
                     <div data-aos="fade-up-left" data-aos-duration="2500" className="">
                       <Image
@@ -213,7 +244,7 @@ export default function Hero() {
                        alt="react"
                        width={100}
                        height={100}
-                        className="w-[100%] md:w-[15%] lg:w-[60%] xl:w-[60%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                        className="w-[20px] md:w-[15%] lg:w-[60%] xl:w-[60%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     <div
@@ -226,7 +257,7 @@ export default function Hero() {
                          alt="node"
                          width={100}
                          height={100}
-                        className="w-[100%] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
+                        className="w-[20px] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
                       />
                     </div>
                     {/* </div> */}
