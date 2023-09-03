@@ -121,15 +121,15 @@ export default function Hero() {
                 </h1>
                 <p className="lg:text-xl text-lg">{subheading}</p>
               </div>
-              <div className="md:flex md:gap-3 items-center border flex p-2 rounded-full w-full md:w-[430px]">
+              <div className="md:flex md:gap-3 items-center border flex p-2 rounded-full w-full md:w-[440px]">
                 {iconData.map((icon, index) => (
                   <Link key={index} href={icon.link} className="relative group">
                     <div
-                      className={`relative transition-all rounded-full text-gray-400 flex items-center ${
+                      className={`relative rounded-full text-gray-400 flex items-center ${
                         hoveredIcon === index
-                          ? "border-2 border-green-500 text-white"
-                          : ""
-                      }`}
+                          ? "border-2 border-green-500 text-white "
+                          : "border-2 border-transparent"
+                      } transition-border duration-300 ease-in-out`}
                       onMouseEnter={() => setHoveredIcon(index)}
                       onMouseLeave={() => setHoveredIcon(null)}
                     >
@@ -146,9 +146,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div
-            className="w-full lg:w-6/12 relative"
-          >
+          <div className="w-full lg:w-6/12 relative">
             <div className="flex lg:justify-end justify-center">
               <div className="">
                 <Image
@@ -160,93 +158,98 @@ export default function Hero() {
                 />
               </div>
               {showIcons && (
-                <div className="absolute top-[53%] md:top-[15%] lg:top-[200px] xl:top-[15%] left-[32%] md:left-[30%] lg:left-[55%] xl:left-[7%] 2xl:top-[15%] 2xl:left-[20%]
-                ">
-                <div className="flex flex-col lg:gap-5 xl:gap-5 2xl:gap-5 gap-1">
-                  <div className="flex gap-[40px] md:gap-[20%] lg:gap-[280px] xl:gap-[200px] px-[10%] md:px-[10%] lg:px-[50px] xl:px-[45px]">
-                    {/* <div className="flex gap-[200px]"> */}
-                    <div data-aos="fade-up-left" data-aos-duration="2500" className="">
-                      <Image
-                        src="/react.png"
-                        alt="react"
-                        width={100}
-                        height={100}
-                        className="w-[30px] md:w-[15%] lg:w-[60%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
-                      />
+                <div
+                  className="absolute top-[53%] md:top-[15%] lg:top-[200px] xl:top-[15%] left-[32%] md:left-[30%] lg:left-[55%] xl:left-[7%] 2xl:top-[15%] 2xl:left-[20%]
+                "
+                >
+                  <div className="flex flex-col lg:gap-5 xl:gap-5 2xl:gap-5 gap-1">
+                    <div className="flex gap-[40px] md:gap-[20%] lg:gap-[280px] xl:gap-[200px] px-[10%] md:px-[10%] lg:px-[50px] xl:px-[45px]">
+                      <div
+                        data-aos="fade-up-left"
+                        data-aos-duration="2500"
+                        className=""
+                      >
+                        <Image
+                          src="/react.png"
+                          alt="react"
+                          width={100}
+                          height={100}
+                          className="w-[30px] md:w-[15%] lg:w-[60%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                        />
+                      </div>
+                      <div
+                        data-aos="fade-up-right"
+                        data-aos-duration="2500"
+                        className="mr-[0%] ml-6 md:ml-0 lg:ml-0 md:mr-[15%] lg:mr-[0%]"
+                      >
+                        <Image
+                          src="/nodejs.png"
+                          alt="node"
+                          width={100}
+                          height={100}
+                          className="w-[30px] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
+                        />
+                      </div>
                     </div>
-                    <div
-                      data-aos="fade-up-right"
-                      data-aos-duration="2500"
-                      className="mr-[0%] ml-6 md:ml-0 lg:ml-0 md:mr-[15%] lg:mr-[0%]"
-                    >
-                      <Image
-                        src="/nodejs.png"
-                        alt="node"
-                        width={100}
-                        height={100}
-                        className="w-[30px] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
-                      />
-                    </div>
-                    {/* </div> */}
-                  </div>
-                  <div className="flex gap-[40px] md:gap-[20%] lg:gap-[380px] xl:gap-[280px] px-[10%] md:px-[10%] lg:px-[0px] xl:px-[10px]">
-                    {/* <div className="flex gap-[200px]"> */}
-                    <div data-aos="fade-up-left" data-aos-duration="2500" className="">
-                      <Image
-                       src="/javascript.png"
-                       alt="javaScript"
-                       width={100}
-                       height={100}
-                        className="w-[25px] md:w-[15%] lg:w-[60%] xl:w-[65%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
-                      />
-                    </div>
-                    <div
-                      data-aos="fade-up-right"
-                      data-aos-duration="2500"
-                      className="mr-[0%] ml-6 md:ml-0 lg:ml-0 md:mr-[15%] lg:mr-[0%]"
-                    >
-                      <Image
+                    <div className="flex gap-[40px] md:gap-[20%] lg:gap-[380px] xl:gap-[280px] px-[10%] md:px-[10%] lg:px-[0px] xl:px-[10px]">
+                      <div
+                        data-aos="fade-up-left"
+                        data-aos-duration="2500"
+                        className=""
+                      >
+                        <Image
+                          src="/javascript.png"
+                          alt="javaScript"
+                          width={100}
+                          height={100}
+                          className="w-[25px] md:w-[15%] lg:w-[60%] xl:w-[65%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                        />
+                      </div>
+                      <div
+                        data-aos="fade-up-right"
+                        data-aos-duration="2500"
+                        className="mr-[0%] ml-6 md:ml-0 lg:ml-0 md:mr-[15%] lg:mr-[0%]"
+                      >
+                        <Image
                           src="/tailwind.png"
                           alt="tailwind"
                           width={100}
                           height={100}
-                        className="w-[20px] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
-                      />
+                          className="w-[20px] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
+                        />
+                      </div>
                     </div>
-                    {/* </div> */}
+
+                    <div className="flex gap-[40px] md:gap-[20%] lg:gap-[420px] xl:gap-[320px] px-[10%] md:px-[10%] lg:px-[0px] xl:px-[0px]">
+                      <div
+                        data-aos="fade-up-left"
+                        data-aos-duration="2500"
+                        className=""
+                      >
+                        <Image
+                          src="/html.png"
+                          alt="react"
+                          width={100}
+                          height={100}
+                          className="w-[20px] md:w-[15%] lg:w-[60%] xl:w-[60%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
+                        />
+                      </div>
+                      <div
+                        data-aos="fade-up-right"
+                        data-aos-duration="2500"
+                        className="mr-[0%] ml-6 md:ml-0 lg:ml-0 md:mr-[15%] lg:mr-[0%]"
+                      >
+                        <Image
+                          src="/typescript.png"
+                          alt="node"
+                          width={100}
+                          height={100}
+                          className="w-[20px] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
+                        />
+                      </div>
+                    </div>
                   </div>
-                  
-                  <div className="flex gap-[40px] md:gap-[20%] lg:gap-[420px] xl:gap-[320px] px-[10%] md:px-[10%] lg:px-[0px] xl:px-[0px]">
-                    {/* <div className="flex gap-[200px]"> */}
-                    <div data-aos="fade-up-left" data-aos-duration="2500" className="">
-                      <Image
-                       src="/html.png"
-                       alt="react"
-                       width={100}
-                       height={100}
-                        className="w-[20px] md:w-[15%] lg:w-[60%] xl:w-[60%] h-auto rounded-full animate-fadeInFromCenter animate-spin"
-                      />
-                    </div>
-                    <div
-                      data-aos="fade-up-right"
-                      data-aos-duration="2500"
-                      className="mr-[0%] ml-6 md:ml-0 lg:ml-0 md:mr-[15%] lg:mr-[0%]"
-                    >
-                      <Image
-                         src="/typescript.png"
-                         alt="node"
-                         width={100}
-                         height={100}
-                        className="w-[20px] md:w-[12%] lg:w-[60%] h-auto rounded animate-fadeInFromCenter animate-spin"
-                      />
-                    </div>
-                    {/* </div> */}
-                  </div>
-                
                 </div>
-              </div>
-              
-              
               )}
             </div>
           </div>
