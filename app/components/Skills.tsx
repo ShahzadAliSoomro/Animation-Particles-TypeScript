@@ -82,7 +82,7 @@ export default function Skills() {
           <div className="border-b-2 w-32 border-green-500"></div>
         </div>
         <div className="w-full flex flex-col sm:flex-row justify-center gap-5 lg:gap-16 mt-10 ">
-          <div className="w-full lg:w-[500px] lg:h-[500px] lg:ml-44 ml-0  ">
+          <div className="w-full lg:w-[500px] lg:h-[500px] lg:ml-44 ml-0" data-aos="fade-right">
             <Image src="/prr.avif" alt="hero" width={500} height={500} className="mx-auto" />
           </div>
           <div className="w-full sm:w-1/2 flex pt-9 lg:pt-0">
@@ -106,7 +106,7 @@ export default function Skills() {
                         </div>
                       </div>
                     </div>
-                    <div className="rounded-full bg-blue-500 border-white border-4 w-12 h-8 absolute left-5 lg:left-0 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                    <div className="rounded-full bg-[#1E293B] border-white border-4 w-12 h-8 absolute left-5 lg:left-0 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                       <span className="text-white text-sm ">{skill.percentage}%</span>
                     </div>
                   </div>

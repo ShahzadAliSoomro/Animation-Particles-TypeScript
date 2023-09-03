@@ -3,9 +3,9 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="w-full bg-[#011A26] ">
+    <div className="w-full bg-[#1E293B] ">
       <div className="max-w-[1340px] mx-auto container lg:p-10 p-4">
-        <div className="text-4xl flex flex-col justify-center items-center pt-10 gap-1">
+        <div className="text-4xl flex flex-col justify-center items-center gap-1">
           <h1 className="">About Me</h1>
           <p className="border-b-2 w-44 border-green-500"></p>
         </div>
@@ -21,7 +21,7 @@ export default function About() {
           </div>
           <div
             className="w-full lg:w-6/12 flex flex-col gap-6"
-            data-aos="lg:fade-left fade-right"
+            data-aos="fade-left"
           >
             <h3 className="text-4xl font-semibold">
               Hi There! I'm Shahzad Ali
@@ -61,7 +61,7 @@ export default function About() {
               </div>
             </div>
             <div className="mt-3">
-              <button className="bg-green-500 text-lg p-3 rounded-full hover:-translate-y-3 transition-all duration-500">
+              <button className="bg-green-500 text-lg p-4 py-2 rounded-full hover:-translate-y-3 transition-all duration-500">
                 Download CV
               </button>
             </div>
