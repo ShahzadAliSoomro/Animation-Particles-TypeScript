@@ -96,7 +96,6 @@ export default function Skills() {
                       <div className="w-full sm:w-1/2 lg:pl-0 pl-14">
                         <h1 className="text-white">
                           {skill.name}{" "}
-                          {/* <span className="text-xs text-yellow-400">{skill.percentage}%</span> */}
                         </h1>
                         <div className="mb-4 h-4 relative w-72 lg:w-72 rounded-full overflow-hidden bg-gray-200">
                           <div

@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import {TiSocialGithubCircular, TiSocialDribbbleCircular} from "react-icons/ti";
+import {
+  TiSocialGithubCircular,
+  TiSocialDribbbleCircular,
+} from "react-icons/ti";
 
 const Projects = [
   {
@@ -9,7 +12,6 @@ const Projects = [
     text: "Frontend development for a brand shoes website showcasing the latest footwear collections. Utilized HTML, CSS, JavaScript, React, and Tailwind CSS to craft responsive and visually appealing web pages. Integrated interactive features to enhance user experience, ensuring seamless navigation through product listings. Created a dynamic and engaging frontend to highlight the brand's image and product offerings.",
     githubLink: "https://github.com/ShahzadAliSoomro/Brand-Shoes-App",
     demoLink: "https://shahzadalisoomro.github.io/Brand-Shoes-App/",
-    
   },
   {
     id: 2,
@@ -72,41 +74,41 @@ const Projects = [
 export default function Project() {
   return (
     <div className="w-full bg-[#1E293B] pt-10">
-    <div className="max-w-[1440px] mx-auto container lg:p-10 p-4">
-      <div className="text-4xl text-center pt-10 font-semibold">
-        <h1 className="">PORTFOLIO</h1>
+      <div className="max-w-[1440px] mx-auto container lg:p-10 p-4">
+        <div className="text-4xl text-center pt-10 font-semibold flex flex-col gap-1 justify-center items-center">
+          <h1 className="">PORTFOLIO</h1>
+          <div className="border-b-2 w-52 border-green-500"></div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 pt-8">
+          {Projects.map((project) => (
+            <div key={project.id} className="flex flex-col border shadow p-3">
+              <div className="w-full " data-aos="fade-up">
+                <video controls width={700} height={600}>
+                  <source src={project.video} type="video/mp4"/>
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="pt-3">
+                <p> {project.text}</p>
+              </div>
+              <div className="flex justify-center gap-5 pt-3">
+                <Link href={project.githubLink}>
+                  <button className="bg-green-500 text-white p-2 rounded-lg flex hover:bg-green-500 hover:shadow-lg hover:scale-110 transition-all duration-500">
+                    <TiSocialGithubCircular className="w-6 h-6" />
+                    Github
+                  </button>
+                </Link>
+                <Link href={project.demoLink}>
+                  <button className="bg-green-500 text-white p-2 rounded-lg flex hover:bg-green-500 hover:shadow-lg hover:scale-110 transition-all duration-500">
+                    <TiSocialDribbbleCircular className="w-6 h-6" />
+                    Demo
+                  </button>
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 pt-5" >
-        {Projects.map((project) => (
-          <div key={project.id} className="flex flex-col border shadow p-3" >
-            <div className="w-full " data-aos="fade-up">
-              <video controls width={700} height={600}>
-                <source src={project.video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div className="pt-3">
-              <p> {project.text}</p>
-            </div>
-            <div className="flex justify-center gap-5 pt-3">
-              <Link href={project.githubLink}>
-              
-                <button className="bg-green-500 text-white p-2 rounded-lg flex hover:bg-green-500 hover:shadow-lg hover:scale-110 transition-all duration-500">
-                <TiSocialGithubCircular className='w-6 h-6' />
-                  Github
-                </button>
-              </Link>
-              <Link href={project.demoLink}>
-                <button className="bg-green-500 text-white p-2 rounded-lg flex hover:bg-green-500 hover:shadow-lg hover:scale-110 transition-all duration-500">
-                <TiSocialDribbbleCircular className='w-6 h-6' />
-                  Demo
-                </button>
-              </Link>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
     </div>
   );
 }
