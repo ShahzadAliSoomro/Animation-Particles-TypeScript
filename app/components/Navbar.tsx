@@ -9,7 +9,7 @@ import {
 } from "react-icons/ai";
 import { BiSortDown } from "react-icons/bi";
 import Link from "next/link";
-export default function Header() {
+export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [navbarBgColor, setNavbarBgColor] = useState("transparent");
   const [activeNavItem, setActiveNavItem] = useState(""); // State to track active navigation item

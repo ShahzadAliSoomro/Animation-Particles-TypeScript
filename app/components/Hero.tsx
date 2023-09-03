@@ -10,7 +10,7 @@ import {
   TiSocialInstagramCircular,
 } from "react-icons/ti";
 import Link from "next/link";
-import Design from "./Design";
+import ParticlesAnimation from "./ParticlesAnimation";
 
 const texts = [
   {
@@ -252,7 +252,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <Design />
+      <ParticlesAnimation />
     </div>
   );
 }

@@ -3,7 +3,7 @@ import React, {useEffect} from "react";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Footer from "./components/Footer";
@@ -35,8 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        
-        <Header />
+        <Navbar />
         {children}
         <Footer />
       </body>

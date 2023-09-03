@@ -5,7 +5,7 @@ import type { Container, Engine, IOptions, RecursivePartial } from "tsparticles-
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim"; 
 
-export default function Design() {
+export default function ParticlesAnimation() {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
