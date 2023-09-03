@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
@@ -17,7 +16,7 @@ const texts = [
   {
     heading: "Are You Looking for",
     subheading: "NextJS Developer ?",
-    emphasis: "NextJS",
+    emphasis: "NextJS Developer",
   },
   {
     heading: "Are You Passionate about",
@@ -96,7 +95,7 @@ export default function Hero() {
           return prevIndex - 1;
         });
       }
-    }, 200);
+    }, 100);
 
     return () => {
       clearInterval(interval);
@@ -114,7 +113,7 @@ export default function Hero() {
               <h2 className="text-4xl">Hi There!</h2>
               <h1 className="text-6xl">I'M SHAHZAD ALI</h1>
               <div>
-                <h1 className="lg:text-2xl text-sm font-bold flex gap-2 items-center">
+                <h1 className="lg:text-2xl text-xs font-bold flex gap-2 items-center">
                   {heading}{" "}
                   <span className="lg:text-5xl xl:text-3xl text-xl">
                     {displayedText}
