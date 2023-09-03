@@ -17,6 +17,231 @@ export default function Design() {
     []
   );
 
+  
+
+  // Define the particlesOptions object
+// const particlesOptions: RecursivePartial<IOptions> = {
+//   autoPlay: true,
+//   background: {
+//     color: {
+//       value: "#011A26"
+//     },
+//     image: "",
+//     position: "",
+//     repeat: "",
+//     size: "",
+//     opacity: 2
+//   },
+//   backgroundMask: {
+//     composite: "destination-out",
+//     cover: {
+//       color: {
+//         value: "#fff"
+//       },
+//       opacity: 1
+//     },
+//     enable: false
+//   },
+//   defaultThemes: {},
+//   delay: 0,
+//   fullScreen: {
+//     enable: true,
+//     zIndex: -1
+//   },
+//   detectRetina: true,
+//   duration: 0,
+//   fpsLimit: 120,
+//   interactivity: {
+//     detectsOn: "window",
+//     events: {
+//       onClick: {
+//         enable: false,
+//         mode: "push"
+//       },
+//       onDiv: {
+//         selectors: [],
+//         enable: false,
+//         mode: [],
+//         type: "circle"
+//       },
+//       onHover: {
+//         enable: false,
+//         mode: "trail",
+//         parallax: {
+//           enable: false,
+//           force: 2,
+//           smooth: 10
+//         }
+//       },
+//       resize: {
+//         delay: 0.5,
+//         enable: true
+//       }
+//     },
+//     modes: {
+//       trail: {
+//         delay: 0.005,
+//         pauseOnStop: true,
+//         quantity: 5
+//       },
+//       // Rest of the interactivity modes...
+//     }
+//   },
+//   manualParticles: [],
+//   particles: {
+//     bounce: {
+//       horizontal: {
+//         random: {
+//           enable: false,
+//           minimumValue: 0.1
+//         },
+//         value: 1
+//       },
+//       vertical: {
+//         random: {
+//           enable: false,
+//           minimumValue: 0.1
+//         },
+//         value: 1
+//       }
+//     },
+//     collisions: {
+//       absorb: {
+//         speed: 2
+//       },
+//       bounce: {
+//         horizontal: {
+//           random: {
+//             enable: false,
+//             minimumValue: 0.1
+//           },
+//           value: 1
+//         },
+//         vertical: {
+//           random: {
+//             enable: false,
+//             minimumValue: 0.1
+//           },
+//           value: 1
+//         }
+//       },
+//       enable: false,
+//       maxSpeed: 50,
+//       mode: "bounce",
+//       overlap: {
+//         enable: true,
+//         retries: 0
+//       }
+//     },
+//     color: {
+//       value: "#ffffff",
+//       animation: {
+//         h: {
+//           count: 0,
+//           enable: false,
+//           offset: 0,
+//           speed: 1,
+//           delay: 0,
+//           decay: 0,
+//           sync: true
+//         },
+//         s: {
+//           count: 0,
+//           enable: false,
+//           offset: 0,
+//           speed: 1,
+//           delay: 0,
+//           decay: 0,
+//           sync: true
+//         },
+//         l: {
+//           count: 0,
+//           enable: false,
+//           offset: 0,
+//           speed: 1,
+//           delay: 0,
+//           decay: 0,
+//           sync: true
+//         }
+//       }
+//     },
+//     groups: {},
+//     // Rest of the particle options...
+//   },
+//   pauseOnBlur: true,
+//   pauseOnOutsideViewport: true,
+//   responsive: [],
+//   smooth: false,
+//   style: {},
+//   themes: [],
+//   zLayers: 100,
+//   emitters: {
+//     autoPlay: true,
+//     fill: true,
+//     life: {
+//       wait: false
+//     },
+//     rate: {
+//       quantity: 10,
+//       delay: 0.25
+//     },
+//     shape: "square",
+//     startCount: 0,
+//     size: {
+//       mode: "percent",
+//       height: 0,
+//       width: 0
+//     },
+//     direction: "none",
+//     particles: {},
+//     position: {
+//       x: 50,
+//       y: 50
+//     },
+//     spawnColor: {
+//       value: "#ff0000",
+//       animation: {
+//         h: {
+//           count: 0,
+//           enable: true,
+//           offset: 0,
+//           speed: 5,
+//           delay: 0,
+//           decay: 0,
+//           sync: true
+//         },
+//         s: {
+//           count: 0,
+//           enable: false,
+//           offset: 0,
+//           speed: 1,
+//           delay: 0,
+//           decay: 0,
+//           sync: true
+//         },
+//         l: {
+//           count: 0,
+//           enable: true,
+//           offset: {
+//             min: 20,
+//             max: 80
+//           },
+//           speed: 0,
+//           delay: 0,
+//           decay: 0,
+//           sync: true
+//         }
+//       }
+//     }
+//   },
+//   motion: {
+//     disable: false,
+//     reduce: {
+//       factor: 4,
+//       value: true
+//     }
+//   }
+// };
   const particlesOptions: RecursivePartial<IOptions> = {
     "autoPlay": true,
     "background": {
@@ -609,86 +834,6 @@ export default function Design() {
         "value": true
       }
     }
-    // autoPlay: true,
-    // background: {
-    //   image: "",
-    //   position: "",
-    //   repeat: "",
-    //   size: "",
-    //   opacity: 1
-    // },
-    // backgroundMask: {
-    //   composite: "destination-out" as GlobalCompositeOperation,
-    //   cover: {
-    //     color: {
-    //       value: "#fff"
-    //     },
-    //     opacity: 1
-    //   },
-    //   enable: false
-    // },
-    // fpsLimit: 60,
-    // interactivity: {
-    //   events: {
-    //     onClick: {
-    //       enable: true,
-    //       mode: "push",
-    //     },
-    //     onHover: {
-    //       enable: true,
-    //       mode: "repulse",
-    //     },
-    //     resize: true,
-    //   },
-    //   modes: {
-    //     push: {
-    //       quantity: 4,
-    //     },
-    //     repulse: {
-    //       distance: 150,
-    //       duration: 0.4,
-    //     },
-    //   },
-    // },
-    // particles: {
-    //   color: {
-    //     value: "#ffffff",
-    //   },
-    //   links: {
-    //     color: "#ffffff",
-    //     distance: 150,
-    //     enable: true,
-    //     opacity: 0.5,
-    //     width: 1,
-    //   },
-    //   move: {
-    //     direction: "none",
-    //     enable: true,
-    //     outModes: {
-    //       default: "bounce",
-    //     },
-    //     random: false,
-    //     speed: 6,
-    //     straight: false,
-    //   },
-    //   number: {
-    //     density: {
-    //       enable: true,
-    //       area: 1200,
-    //     },
-    //     value: 80,
-    //   },
-    //   opacity: {
-    //     value: 0.5,
-    //   },
-    //   shape: {
-    //     type: "circle",
-    //   },
-    //   size: {
-    //     value: { min: 1, max: 2 },
-    //   },
-    // },
-    // detectRetina: true,
       
   }
   return (
@@ -699,75 +844,6 @@ export default function Design() {
         init={particlesInit}
         loaded={particlesLoaded}
         options={particlesOptions}
-        // options={{
-        //   background: {
-        //     // color: {
-        //     //   value: "#0d47a1",
-        //     // },
-        //   },
-        //   fpsLimit: 60,
-        //   interactivity: {
-        //     events: {
-        //       onClick: {
-        //         enable: true,
-        //         mode: "push",
-        //       },
-        //       onHover: {
-        //         enable: true,
-        //         mode: "repulse",
-        //       },
-        //       resize: true,
-        //     },
-        //     modes: {
-        //       push: {
-        //         quantity: 4,
-        //       },
-        //       repulse: {
-        //         distance: 150,
-        //         duration: 0.4,
-        //       },
-        //     },
-        //   },
-        //   particles: {
-        //     color: {
-        //       value: "#ffffff",
-        //     },
-        //     links: {
-        //       color: "#ffffff",
-        //       distance: 150,
-        //       enable: true,
-        //       opacity: 0.5,
-        //       width: 1,
-        //     },
-        //     move: {
-        //       direction: "none",
-        //       enable: true,
-        //       outModes: {
-        //         default: "bounce",
-        //       },
-        //       random: false,
-        //       speed: 6,
-        //       straight: false,
-        //     },
-        //     number: {
-        //       density: {
-        //         enable: true,
-        //         area: 1200,
-        //       },
-        //       value: 80,
-        //     },
-        //     opacity: {
-        //       value: 0.5,
-        //     },
-        //     shape: {
-        //       type: "circle",
-        //     },
-        //     size: {
-        //       value: { min: 1, max: 2 },
-        //     },
-        //   },
-        //   detectRetina: true,
-        // }}
       />
     </div>
   );
