@@ -109,7 +109,7 @@ export default function Hero() {
       <div className="max-w-[1440px] mx-auto container lg:p-10 p-4">
         <div className="flex justify-between pt-24 xl:pt-10 flex-wrap lg:flex-nowrap gap-5">
           <div className="w-full lg:w-6/12">
-            <div className="flex flex-col gap-12 lg:pt-10 pt-0">
+            <div className="flex flex-col gap-12 lg:pt-16 pt-0">
               <h2 className="text-4xl">Hi There!</h2>
               <h1 className="text-6xl">I'M SHAHZAD ALI</h1>
               <div>

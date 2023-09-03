@@ -61,7 +61,7 @@ export default function Navbar() {
             }`}
           >
             <Link href="/">
-              <p className="-my-7 lg:my-0 pl-3 lg:pl-0">Shahzad</p>
+              <p className="-my-7 lg:my-0 pl-3 lg:pl-0">DevShahzad</p>
             </Link>
           </div>
           <div className="hidden md:flex gap-6 font-semibold">
