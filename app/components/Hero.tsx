@@ -31,12 +31,14 @@ const texts = [
 ];
 
 export default function Hero() {
+  // State variables
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [hoveredIcon, setHoveredIcon] = useState<number | null>(null);
   const [showIcons, setShowIcons] = useState(false);
   const [isOpening, setIsOpening] = useState(true);
 
+  // Effect to show icons after a delay
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowIcons(true);
@@ -47,6 +49,7 @@ export default function Hero() {
     };
   }, []);
 
+  // Data for social media icons
   const iconData = [
     // icon data
     {
@@ -75,6 +78,8 @@ export default function Hero() {
       text: "Instagram",
     },
   ];
+
+  // Effect to animate the text
   useEffect(() => {
     const interval = setInterval(() => {
       if (isOpening) {
@@ -149,6 +154,7 @@ export default function Hero() {
           <div className="w-full lg:w-6/12 relative">
             <div className="flex lg:justify-end justify-center">
               <div className="">
+                {/* Display an image here */}
                 <Image
                   src="/vec-d.png"
                   alt="vector"
@@ -162,8 +168,11 @@ export default function Hero() {
                   className="absolute top-[53%] md:top-[15%] lg:top-[200px] xl:top-[15%] left-[32%] md:left-[30%] lg:left-[55%] xl:left-[7%] 2xl:top-[15%] 2xl:left-[20%]
                 "
                 >
+                  {/* Display animated icons here */}
                   <div className="flex flex-col lg:gap-5 xl:gap-5 2xl:gap-5 gap-1">
                     <div className="flex gap-[40px] md:gap-[20%] lg:gap-[280px] xl:gap-[200px] px-[10%] md:px-[10%] lg:px-[50px] xl:px-[45px]">
+                      {/* Icons */}
+                    {/* Example icon */}
                       <div
                         data-aos="fade-up-left"
                         data-aos-duration="2500"
@@ -255,6 +264,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      {/* Particle animation */}
       <ParticlesAnimation />
     </div>
   );

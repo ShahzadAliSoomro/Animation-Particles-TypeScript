@@ -1,11 +1,8 @@
 import React from 'react'
-import Design from './components/ParticlesAnimation'
-import Header from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Project from './components/Project'
 import Contact from './components/Contact'
-import Footer from './components/Footer'
 import Service from './components/Service'
 import Skills from './components/Skills'
 
@@ -20,7 +17,6 @@ export default function Home() {
     <Skills />
     <Project />
     <Contact />
-    {/* <Footer /> */}
   </div>
 
   )

@@ -9,7 +9,7 @@ export default function About() {
           <h1 className="">About Me</h1>
           <p className="border-b-2 w-44 border-green-500"></p>
         </div>
-        <div className="w-full flex flex-col lg:flex-row pt-20 lg:space-x-10">
+        <div className="w-full flex flex-col lg:flex-row pt-12 lg:space-x-10">
           <div className="w-full lg:w-6/12 mb-10 lg:mb-0" data-aos="fade-right">
             <Image
               src="/prr.avif"
@@ -19,10 +19,7 @@ export default function About() {
               className="mx-auto"
             />
           </div>
-          <div
-            className="w-full lg:w-6/12 flex flex-col gap-6"
-            data-aos="fade-left"
-          >
+          <div className="w-full lg:w-6/12 flex flex-col gap-6">
             <h3 className="text-4xl font-semibold">
               Hi There! I'm Shahzad Ali
             </h3>
