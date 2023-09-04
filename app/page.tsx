@@ -40,8 +40,34 @@ export default function Home() {
       page where you want to display information about yourself. Simply import the component and 
       render it within your desired page or layout. */}
       <About />
-      
+      {/* Here's what each part of the code does: 
+      1.The "Service" component displays a set of service cards, each containing information 
+      about a particular service you offer. It uses various icons from different libraries to
+      represent these services. 
+      2. The services array holds objects representing each service. Each object has an id, title,
+      text, and icon property. id: A unique identifier for the service.title: The title or name of the service.
+      text: A description or text explaining the service.icon: An icon representing the service, chosen from different icon components. 
+      3. The component begins by rendering a "Service" title and an underlined separator. 
+      4. It then creates a grid layout to display the service cards. The number of columns in the grid 
+      adjusts based on screen size (responsive design). 
+      5. For each service in the services array, a service card is generated. The card includes: The service icon.The service title.The
+      service text (description). 
+      6. Hover effects (background color change, shadow, and scale) are applied to the service cards to provide interactivity. 
+      To use this "Service" component, you can import it into your main application file or any page where you want to showcase your
+      services. Simply include the component in your JSX code to display the
+      services you offer. */}
       <Service />
+      {/* Explanation of the "Skills" component
+      1. The "Skills" component displays a set of skills with their proficiency percentages in a visually appealing format.
+      2. The skillsData array holds objects representing each skill. Each object has a name (the skill name) and a percentage (the proficiency percentage).
+      3. The component is divided into two main sections: * The left section displays an image (your photo, for example).
+      * The right section lists the skills and their proficiency percentages.
+      4. The image is displayed using the next/image component with responsive sizing.
+      5. Skills and their percentages are displayed in a column on the right side: * Each skill is listed with its name (e.g., HTML) and proficiency percentage (e.g., 80%).
+      * A visual bar represents the proficiency percentage using a yellow background. * A rounded percentage badge is displayed beside each skill.
+      6. The data-aos attribute is used to apply a fade-in animation to the skills section when it appears on the screen.
+      To use this "Skills" component, simply import it into your main application file or any page where you want to showcase your skills. 
+      You can customize the skillsData array to include your own skills and proficiency percentages. */}
       <Skills />
       <Project />
       <Contact />

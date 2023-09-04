@@ -1,7 +1,14 @@
-import React from 'react';
-import { AiOutlineCode, AiOutlineMobile, AiOutlineLayout, AiOutlineDesktop, AiOutlineApi, AiOutlineFile } from 'react-icons/ai';
-import { SiInteractiondesignfoundation } from 'react-icons/si';
-import { FaConnectdevelop } from 'react-icons/fa';
+import React from "react";
+import {
+  AiOutlineCode,
+  AiOutlineMobile,
+  AiOutlineLayout,
+  AiOutlineDesktop,
+  AiOutlineApi,
+  AiOutlineFile,
+} from "react-icons/ai";
+import { SiInteractiondesignfoundation } from "react-icons/si";
+import { FaConnectdevelop } from "react-icons/fa";
 
 const services = [
   {
@@ -44,24 +51,36 @@ const services = [
 ];
 export default function Service() {
   return (
-    <div className='w-full bg-[#1E293B] p-4'>
-      <div className='max-w-[1440px] mx-auto lg:px-10 px-0' >
+    <div className="w-full bg-[#1E293B] p-4">
+      <div className="max-w-[1440px] mx-auto lg:px-10 px-0">
         <div className="text-4xl flex flex-col justify-center items-center pt-10 gap-1">
           <h1 className="">Service</h1>
           <p className="border-b-2 w-32 border-green-500"></p>
         </div>
 
-        <div className='max-w-[1440px] mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 pt-10' >
+        {/* Service Cards */}
+        <div className="max-w-[1440px] mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 pt-10">
           {services.map((service) => (
             <div
               key={service.id}
-              className='border flex justify-center items-center hover:bg-green-500 hover:shadow-lg 
-              hover:scale-105 transition-all duration-500' 
+              className="border flex justify-center items-center hover:bg-green-500 hover:shadow-lg 
+              hover:scale-105 transition-all duration-500"
             >
-              <div className='flex flex-col justify-center items-center p-8 gap-4' data-aos="fade-up">
-                <div className='bg-green-500 p-2 rounded-full'>{service.icon}</div>
-                <h3 className='text-xl'>{service.title}</h3>
-                <p className="w-full lg:w-80 text-center text-gray-400 hover:text-white">{service.text}</p>
+              <div
+                className="flex flex-col justify-center items-center p-8 gap-4"
+                data-aos="fade-up"
+              >
+                {/* Service Icon */}
+                <div className="bg-green-500 p-2 rounded-full">
+                  {service.icon}
+                </div>
+                {/* Service Title */}
+                <h3 className="text-xl">{service.title}</h3>
+
+                {/* Service Text */}
+                <p className="w-full lg:w-80 text-center text-gray-400 hover:text-white">
+                  {service.text}
+                </p>
               </div>
             </div>
           ))}
