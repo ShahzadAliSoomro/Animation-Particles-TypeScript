@@ -9,7 +9,7 @@ import Skills from "./components/Skills";
 export default function Home() {
   return (
     <div className="w-full text-white">
-      {/* Here's what each part of the code does: 
+      {/* Explanation of the "Hero" component
       1. The Hero component contains various state variables to manage animations and interactions. It also
       includes data for text and social media icons. 
       2. The useEffect hook is used to delay the display of icons (showIcons) after a certain time. 
@@ -24,7 +24,7 @@ export default function Home() {
       hero section. Just make sure to import the necessary dependencies and set
       up any required styling and animations. */}
       <Hero />
-      {/* Here's what each part of the code does:
+      {/* Explanation of the "About" component
       1. The "About" component is a section of your webpage that provides information about you, 
       including your image, job title, description, and personal details.
       2. It uses the next/image package to display an image efficiently. You have provided the 
@@ -40,7 +40,7 @@ export default function Home() {
       page where you want to display information about yourself. Simply import the component and 
       render it within your desired page or layout. */}
       <About />
-      {/* Here's what each part of the code does: 
+      {/* Explanation of the "Service" component 
       1.The "Service" component displays a set of service cards, each containing information 
       about a particular service you offer. It uses various icons from different libraries to
       represent these services. 
