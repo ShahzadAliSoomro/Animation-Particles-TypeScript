@@ -5,6 +5,7 @@ import {
   TiSocialDribbbleCircular,
 } from "react-icons/ti";
 
+// Define an array of projects, each with an ID, video source, description, GitHub link, and demo link
 const Projects = [
   {
     id: 1,
@@ -82,22 +83,27 @@ export default function Project() {
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 pt-8">
           {Projects.map((project) => (
             <div key={project.id} className="flex flex-col border shadow p-3">
+              {/* Video Component */}
               <div className="w-full " data-aos="fade-up">
                 <video controls width={700} height={600}>
-                  <source src={project.video} type="video/mp4"/>
+                  <source src={project.video} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
+              {/* Project Description */}
               <div className="pt-3">
                 <p> {project.text}</p>
               </div>
+              {/* GitHub and Demo Buttons */}
               <div className="flex justify-center gap-5 pt-3">
+                {/* GitHub Link */}
                 <Link href={project.githubLink}>
                   <button className="bg-green-500 text-white p-2 rounded-lg flex hover:bg-green-500 hover:shadow-lg hover:scale-110 transition-all duration-500">
                     <TiSocialGithubCircular className="w-6 h-6" />
                     Github
                   </button>
                 </Link>
+                {/* Demo Link */}
                 <Link href={project.demoLink}>
                   <button className="bg-green-500 text-white p-2 rounded-lg flex hover:bg-green-500 hover:shadow-lg hover:scale-110 transition-all duration-500">
                     <TiSocialDribbbleCircular className="w-6 h-6" />

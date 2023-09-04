@@ -69,7 +69,26 @@ export default function Home() {
       To use this "Skills" component, simply import it into your main application file or any page where you want to showcase your skills. 
       You can customize the skillsData array to include your own skills and proficiency percentages. */}
       <Skills />
+      {/* Explanation of the "Projects" component
+      1. The "Projects" component is designed to showcase a list of projects with video previews, descriptions, GitHub links, and demo links.
+      2. The Projects array holds objects representing each project. Each object has an id, video (path to the project video), 
+      text (project description), githubLink (GitHub repository link), and demoLink (link to the live demo or project webpage).
+      3. The component is divided into sections for each project, displayed in a grid layout.
+      4. For each project: * A video component is used to display a video preview of the project. It allows users to control the video playback.
+      * The project description is provided beneath the video. * GitHub and Demo buttons are displayed, allowing users to navigate to the project's GitHub repository or demo page.
+      5. The data-aos attribute is used to apply a fade-up animation when each project appears on the screen.
+      To use this "Projects" component, simply import it into your main application file or any page where you want to showcase your projects. 
+      Update the Projects array with your own project details, including video paths, descriptions, GitHub links, and demo links. */}
       <Project />
+      {/* Explanation of the "Contact" component
+      1. The "Contact" component is designed to display contact information, including a contact form and details like location, phone numbers, and email.
+      2. The component is divided into two main sections, with the left column containing the contact form and the right column containing contact information.
+      3. The contact form includes fields for Name, Email, and Message. Users can enter their details and send a message directly through the form.
+      4. The "Send" button allows users to submit the form. You can specify the form action and method when you are ready to handle form submissions on your server.
+      5. Information such as the website's Privacy Policy and Terms of Service are provided with links.
+      6. The right column displays contact information, including the physical location, phone numbers (Phone and WhatsApp), and the email address.
+      To use this "Contact" component, import it into your main application file or any page where you want to provide contact information and a contact form. 
+      You can further customize the styling and layout to match your website's design. */}
       <Contact />
     </div>
   );
