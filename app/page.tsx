@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
-// import Hero from "./components/Hero";
+import Hero from "./components/Hero";
 import About from "./components/About";
 // import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Service from "./components/Service";
 import Skills from "./components/Skills";
 
-const Hero = dynamic(() => import("./components/Hero"), { ssr: false });
+// const Hero = dynamic(() => import("./components/Hero"), { ssr: false });
 // const About = dynamic(() => import("./components/About"), { ssr: false });
 const Project = dynamic(() => import("./components/Project"), { ssr: false });
 // const Contact = dynamic(() => import("./components/Contact"), { ssr: false });

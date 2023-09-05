@@ -18,6 +18,7 @@ const ParticlesAnimation = dynamic(() => import('./ParticlesAnimation'), {
   ssr: false
 })
 
+
 const texts = [
   {
     heading: "Are You Looking for",
