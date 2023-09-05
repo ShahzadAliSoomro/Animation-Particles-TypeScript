@@ -1,14 +1,9 @@
-"use client"; // This is a pragma for the client-side
-import React, {useEffect} from "react";
+import React from "react";
 import "./globals.css"; // Importing global CSS styles
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar"; // Importing the Navbar component
-import AOS from 'aos'; // Importing the AOS library for animations
-import 'aos/dist/aos.css'; // Importing AOS styles
 import Footer from "./components/Footer"; // Importing the Footer component
-// ..
-// AOS.init();
 
 // Initializing the Inter font with the 'latin' subset
 const inter = Inter({ subsets: ["latin"] });
@@ -25,16 +20,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-    // Use useEffect to run code after the component is mounted
-  useEffect(() => {
-    // Check if running in a browser environment before initializing AOS
-    if (typeof window !== 'undefined') {
-      AOS.init({
-        duration: 500, // Animation duration in milliseconds
-        once: false, // Whether animations should only happen once
-      });
-    }
-  }, []); // Empty dependency array ensures this effect runs only once
   return (
     <html lang="en">
       <body className={inter.className}>

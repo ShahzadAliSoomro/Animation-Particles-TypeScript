@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-
 import {
   TiSocialLinkedinCircular,
   TiSocialTwitterCircular,
@@ -10,7 +9,14 @@ import {
   TiSocialInstagramCircular,
 } from "react-icons/ti";
 import Link from "next/link";
-import ParticlesAnimation from "./ParticlesAnimation";
+import AOS from 'aos'; // Importing the AOS library for animations
+import 'aos/dist/aos.css'; // Importing AOS styles
+// import ParticlesAnimation from "./ParticlesAnimation";
+import dynamic from "next/dynamic";
+
+const ParticlesAnimation = dynamic(() => import('./ParticlesAnimation'), {
+  ssr: false
+})
 
 const texts = [
   {
@@ -37,6 +43,17 @@ export default function Hero() {
   const [hoveredIcon, setHoveredIcon] = useState<number | null>(null);
   const [showIcons, setShowIcons] = useState(false);
   const [isOpening, setIsOpening] = useState(true);
+
+    // Use useEffect to run code after the component is mounted
+    useEffect(() => {
+      // Check if running in a browser environment before initializing AOS
+      if (typeof window !== 'undefined') {
+        AOS.init({
+          duration: 500, // Animation duration in milliseconds
+          once: false, // Whether animations should only happen once
+        });
+      }
+    }, []); // Empty dependency array ensures this effect runs only once
 
   // Effect to show icons after a delay
   useEffect(() => {
