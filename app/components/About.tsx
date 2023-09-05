@@ -68,7 +68,7 @@ export default function About() {
             
             {/* Download CV Button */}
             <div className="mt-3">
-              <button className="bg-green-500 text-lg p-4 py-2 rounded-full hover:-translate-y-3 transition-all duration-500">
+              <button className="bg-green-500 text-[#112A46] font-semibold text-lg p-4 py-2 rounded-full hover:-translate-y-3 transition-all duration-500">
                 Download CV
               </button>
             </div>

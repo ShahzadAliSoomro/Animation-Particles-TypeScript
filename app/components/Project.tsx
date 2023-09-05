@@ -1,9 +1,14 @@
+"use client";
+import dynamic from "next/dynamic";
 import React from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import {
   TiSocialGithubCircular,
   TiSocialDribbbleCircular,
 } from "react-icons/ti";
+
+const Link = dynamic(() => import("next/link"),
+  { ssr: false });
 
 // Define an array of projects, each with an ID, video source, description, GitHub link, and demo link
 const Projects = [
@@ -104,14 +109,14 @@ export default function Project() {
               <div className="flex justify-center gap-5 pt-3">
                 {/* GitHub Link */}
                 <Link href={portfolio.githubLink}>
-                  <button className="bg-green-500 text-white p-2 rounded-lg flex hover:bg-green-500 hover:shadow-lg hover:scale-110 transition-all duration-500">
+                  <button className="bg-green-500 text-[#112A46] font-semibold p-2 rounded-lg flex hover:bg-green-500 hover:shadow-lg hover:scale-110 transition-all duration-500">
                     <TiSocialGithubCircular className="w-6 h-6" />
                     Github
                   </button>
                 </Link>
                 {/* Demo Link */}
                 <Link href={portfolio.demoLink}>
-                  <button className="bg-green-500 text-white p-2 rounded-lg flex hover:bg-green-500 hover:shadow-lg hover:scale-110 transition-all duration-500">
+                  <button className="bg-green-500 text-[#112A46] font-semibold p-2 rounded-lg flex hover:bg-green-500 hover:shadow-lg hover:scale-110 transition-all duration-500">
                     <TiSocialDribbbleCircular className="w-6 h-6" />
                     Demo
                   </button>

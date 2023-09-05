@@ -1,10 +1,19 @@
+"use client";
 import React from "react";
-import Hero from "./components/Hero";
+import dynamic from "next/dynamic";
+// import Hero from "./components/Hero";
 import About from "./components/About";
-import Project from "./components/Project";
+// import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Service from "./components/Service";
 import Skills from "./components/Skills";
+
+const Hero = dynamic(() => import("./components/Hero"), { ssr: false });
+// const About = dynamic(() => import("./components/About"), { ssr: false });
+const Project = dynamic(() => import("./components/Project"), { ssr: false });
+// const Contact = dynamic(() => import("./components/Contact"), { ssr: false });
+// const Service = dynamic(() => import("./components/Service"), { ssr: false });
+// const Skills = dynamic(() => import("./components/Skills"), { ssr: false });
 
 export default function Home() {
   return (

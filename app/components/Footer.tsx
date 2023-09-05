@@ -22,31 +22,31 @@ export default function Footer() {
           <div className="flex gap-5 cursor-pointer text-gray-400 ">
             <Link href="https://github.com">
               <TiSocialGithubCircular
-                className="w-9 h-9 hover:bg-green-500 hover:text-white rounded-full 
+                className="w-9 h-9 hover:bg-green-500 hover:text-[#112A46] rounded-full 
               hover:-translate-y-2 transition-all duration-500"
               />
             </Link>
             <Link href="https://www.linkedin.com">
               <TiSocialLinkedinCircular
-                className="w-9 h-9 hover:bg-green-500 hover:text-white rounded-full
+                className="w-9 h-9 hover:bg-green-500 hover:text-[#112A46] rounded-full
               hover:-translate-y-2 transition-all duration-500"
               />
             </Link>
             <Link href="https://www.facebook.com">
               <TiSocialFacebookCircular
-                className="w-9 h-9 hover:bg-green-500 hover:text-white rounded-full
+                className="w-9 h-9 hover:bg-green-500 hover:text-[#112A46] rounded-full
               hover:-translate-y-2 transition-all duration-500"
               />
             </Link>
             <Link href="https://twitter.com">
               <TiSocialTwitterCircular
-                className="w-9 h-9 hover:bg-green-500 hover:text-white rounded-full
+                className="w-9 h-9 hover:bg-green-500 hover:text-[#112A46] rounded-full
               hover:-translate-y-2 transition-all duration-500"
               />
             </Link>
             <Link href="https://instagram.com">
               <TiSocialInstagramCircular
-                className="w-9 h-9 hover:bg-green-500 hover:text-white rounded-full
+                className="w-9 h-9 hover:bg-green-500 hover:text-[#112A46] rounded-full
                 hover:-translate-y-2 transition-all duration-500"
               />
             </Link>
