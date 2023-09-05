@@ -10,6 +10,8 @@
             margin: 0;
             padding: 0;
             background-color: #f0f0f0; /* Set a background color */
+            max-width: 1000px; /* Set the maximum width */
+            margin: 0 auto; /* Center the content horizontally */
         }
         .folder {
             margin-left: 20px;
@@ -20,6 +22,7 @@
             background-color: #1E293B;
             color: #fff;
             padding: 10px;
+            align-items: center;
         }
         h2 {
             background-color: #2a3a54;
@@ -32,6 +35,8 @@
         }
         ul.folder li {
             margin: 5px 0;
+            color: #6b7280;
+            font-weight: 600;
         }
         p {
             margin: 5px 0;
@@ -45,177 +50,193 @@
         a:hover {
             text-decoration: underline; /* Add underline on hover */
         }
+    
+        /* Custom styles */
+        p.custom-paragraph {
+            color: #6b7280; /* Gray text (text-gray-500) */
+            font-weight: 500; /* Semi-bold (font-semibold) */
+        }
+    
+        /* Centered image with maximum width */
+        /* img.centered-image {
+            max-width: 1280px; 
+            display: block; 
+            margin: 0 auto; 
+            max-height: 500px; 
+        } */
     </style>
     
 </head>
 <body>
+    <!-- Centered image with maximum width -->
+    <!-- <img class="centered-image max-w-screen-xl mx-auto" src="https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80" alt="Your Image Description"> -->
     <h1>Project Folder Structure</h1>
     <ul class="folder">
         <li>my-app/
             <ul class="folder">
-                <li>.next/</li>
-                <li>app/
-                    <ul class="folder">
-                        <li>components/
+                <li><span>├──</span> .next/</li>
+                <li><span>├──</span> app/
+                    <ul class="folder"> 
+                        <li><span>└── </span> components/
                             <ul class="folder">
-                                <li>About.tsx</li>
-                                <li>Contact.tsx</li>
-                                <li>Footer.tsx</li>
-                                <li>Hero.tsx</li>
-                                <li>Navbar.tsx</li>
-                                <li>ParticlesAnimation.tsx</li>
-                                <li>Project.tsx</li>
-                                <li>Service.tsx</li>
-                                <li>Skills.tsx</li>
+                                <li><span>└──</span> About.tsx</li>
+                                <li><span>└──</span> Contact.tsx</li>
+                                <li><span>└──</span> Footer.tsx</li>
+                                <li><span>└──</span> Hero.tsx</li>
+                                <li><span>└──</span> Navbar.tsx</li>
+                                <li><span>└──</span> ParticlesAnimation.tsx</li>
+                                <li><span>└──</span> Project.tsx</li>
+                                <li><span>└──</span> Service.tsx</li>
+                                <li><span>└──</span> Skills.tsx</li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li>favicon.ico</li>
-                <li>globals.css</li>
-                <li>layout.tsx</li>
-                <li>page.tsx</li>
+                <li><span>└──</span> favicon.ico</li>
+                <li><span>└──</span> globals.css</li>
+                <li><span>└──</span> layout.tsx</li>
+                <li><span>└──</span> page.tsx</li>
             </ul>
         </li>
-        <li>node_modules/</li>
-        <li>public/
-            <ul class="folder">
-                <li>Image/</li>
-            </ul>
+        <li><span>├──</span> node_modules/</li>
+        <li><span>├──</span> public/
+            <!-- <ul class="folder">
+                <li><span>└──</span> Image/</li>
+            </ul> -->
         </li>
-        <li>.gitignore</li>
-        <li>next-env.d.ts</li>
-        <li>next.config.js</li>
-        <li>package-lock.json</li>
-        <li>package.json</li>
-        <li>postcss.config.js</li>
-        <li>README.md</li>
-        <li>tailwind.config.ts</li>
-        <li>tsconfig.json</li>
+        <li><span>├──</span> .gitignore</li>
+        <li><span>├──</span> next-env.d.ts</li>
+        <li><span>├──</span> next.config.js</li>
+        <li><span>├──</span> package-lock.json</li>
+        <li><span>├──</span> package.json</li>
+        <li><span>├──</span> postcss.config.js</li>
+        <li><span>├──</span> README.md</li>
+        <li><span>├──</span> tailwind.config.ts</li>
+        <li><span>├──</span> tsconfig.json</li>
     </ul>
     <h2>Description of Components</h2>
-    <p>1. About.tsx: Component for displaying information about your project or yourself.</p>
-    <p>2. Contact.tsx: Component for the contact form and contact information.</p>
-    <p>3. Footer.tsx: Component for the website's footer.</p>
-    <p>4. Hero.tsx: Component for the hero section of your website, often used for introductions.</p>
-    <p>5. Navbar.tsx: Component for the navigation bar/menu.</p>
-    <p>6. ParticlesAnimation.tsx: Component responsible for a particle animation effect, likely used for visual effects on your website.</p>
-    <p>7. Project.tsx: Component for displaying information about projects, including videos and links.</p>
-    <p>8. Service.tsx: Component for showcasing services you offer.</p>
-    <p>9. Skills.tsx: Component for displaying your skills and proficiency.</p>
+    <p class="custom-paragraph">1. About.tsx: Component for displaying information about your project or yourself.</p>
+    <p class="custom-paragraph">2. Contact.tsx: Component for the contact form and contact information.</p>
+    <p class="custom-paragraph">3. Footer.tsx: Component for the website's footer.</p>
+    <p class="custom-paragraph">4. Hero.tsx: Component for the hero section of your website, often used for introductions.</p>
+    <p class="custom-paragraph">5. Navbar.tsx: Component for the navigation bar/menu.</p>
+    <p class="custom-paragraph">6. ParticlesAnimation.tsx: Component responsible for a particle animation effect, likely used for visual effects on your website.</p>
+    <p class="custom-paragraph">7. Project.tsx: Component for displaying information about projects, including videos and links.</p>
+    <p class="custom-paragraph">8. Service.tsx: Component for showcasing services you offer.</p>
+    <p class="custom-paragraph">9. Skills.tsx: Component for displaying your skills and proficiency.</p>
 
     <h2>Description of Files</h2>
-    <p>1. favicon.ico: The website's favicon (icon displayed in the browser tab).</p>
-    <p>2. globals.css: Global CSS styles for your project.</p>
-    <p>3. layout.tsx: Layout component that likely wraps your pages for consistent structure.</p>
-    <p>4. page.tsx: Your main page component.</p>
-    <p>5. public/Image/: Directory for storing public images used in your project.</p>
+    <p class="custom-paragraph">1. favicon.ico: The website's favicon (icon displayed in the browser tab).</p>
+    <p class="custom-paragraph">2. globals.css: Global CSS styles for your project.</p>
+    <p class="custom-paragraph">3. layout.tsx: Layout component that likely wraps your pages for consistent structure.</p>
+    <p class="custom-paragraph">4. page.tsx: Your main page component.</p>
+    <p class="custom-paragraph">5. public/Image/: Directory for storing public images used in your project.</p>
 
     <h2>Dependencies and DevDependencies</h2>
-    <p>1. @react-icons/all-files: A library for using icons in your React components.</p>
-    <p>2. @types/node: TypeScript type definitions for Node.js.</p>
-    <p>3. @types/react and @types/react-dom: TypeScript type definitions for React and ReactDOM.</p>
-    <p>4. aos: Library for animating elements as they scroll into view.</p>
-    <p>5. autoprefixer: A PostCSS plugin to parse CSS and add vendor prefixes to CSS rules.</p>
-    <p>6. next: The Next.js framework.</p>
-    <p>7. postcss: A tool for processing CSS.</p>
-    <p>8. react and react-dom: React library and its DOM bindings.</p>
-    <p>9. react-icons: A library for using icons in React.</p>
-    <p>10.react-particles: A library for creating particle animations.</p>
-    <p>11.tailwindcss: A utility-first CSS framework.</p>
-    <p>12.tsparticles-engine and tsparticles-slim: Engine and library for particle animations.</p>
-    <p>13.typescript: TypeScript language and compiler.</p>
-    <p>Your portfolio website is designed to showcase your projects, skills, and services in an 
+    <p class="custom-paragraph">1. @react-icons/all-files: A library for using icons in your React components.</p>
+    <p class="custom-paragraph">2. @types/node: TypeScript type definitions for Node.js.</p>
+    <p class="custom-paragraph">3. @types/react and @types/react-dom: TypeScript type definitions for React and ReactDOM.</p>
+    <p class="custom-paragraph">4. aos: Library for animating elements as they scroll into view.</p>
+    <p class="custom-paragraph">5. autoprefixer: A PostCSS plugin to parse CSS and add vendor prefixes to CSS rules.</p>
+    <p class="custom-paragraph">6. next: The Next.js framework.</p>
+    <p class="custom-paragraph">7. postcss: A tool for processing CSS.</p>
+    <p class="custom-paragraph">8. react and react-dom: React library and its DOM bindings.</p>
+    <p class="custom-paragraph">9. react-icons: A library for using icons in React.</p>
+    <p class="custom-paragraph">10.react-particles: A library for creating particle animations.</p>
+    <p class="custom-paragraph">11.tailwindcss: A utility-first CSS framework.</p>
+    <p class="custom-paragraph">12.tsparticles-engine and tsparticles-slim: Engine and library for particle animations.</p>
+    <p class="custom-paragraph">13.typescript: TypeScript language and compiler.</p>
+    <p class="custom-paragraph">Your portfolio website is designed to showcase your projects, skills, and services in an 
     organized and visually appealing manner, making it easy for visitors to learn about your 
     work and get in touch with you.</p>
 
 
     <h2>Explanation of the "Hero" component</h2>
-       <p>1. The Hero component contains various state variables to manage animations and interactions. It also
+       <p class="custom-paragraph">1. The Hero component contains various state variables to manage animations and interactions. It also
       includes data for text and social media icons.</p>
-       <p>2. The useEffect hook is used to delay the display of icons (showIcons) after a certain time. </p>
-       <p>3. The iconData array contains information about social media icons along with their links. </p>
-       <p>4. Another useEffect hook is used for animating the text in the hero section. </p>
-       <p>5. The component renders the hero section, including text, social media icons, and an image. </p>
-       <p>6. The Image component from Next.js is used to display an image. </p>
-       <p>7. The animated icons are displayed with the help of the data-aos attribute, and the ParticlesAnimation
+       <p class="custom-paragraph">2. The useEffect hook is used to delay the display of icons (showIcons) after a certain time. </p>
+       <p class="custom-paragraph">3. The iconData array contains information about social media icons along with their links. </p>
+       <p class="custom-paragraph">4. Another useEffect hook is used for animating the text in the hero section. </p>
+       <p class="custom-paragraph">5. The component renders the hero section, including text, social media icons, and an image. </p>
+       <p class="custom-paragraph">6. The Image component from Next.js is used to display an image. </p>
+       <p class="custom-paragraph">7. The animated icons are displayed with the help of the data-aos attribute, and the ParticlesAnimation
       component is also rendered.</p>
      
-       <p>To use this Hero component, you can include it
+       <p class="custom-paragraph">To use this Hero component, you can include it
       in your main application file or in any page where you want to display the
       hero section. Just make sure to import the necessary dependencies and set
       up any required styling and animations.</p>
 
       <h2>Explanation of the "About" component</h2>
-      <p>1. The "About" component is a section of your webpage that provides information about you,</p>
-      <p>2. It uses the next/image package to display an image efficiently. You have provided the 
+      <p class="custom-paragraph">1. The "About" component is a section of your webpage that provides information about you,</p>
+      <p class="custom-paragraph">2. It uses the next/image package to display an image efficiently. You have provided the 
      path to the image (src), its alt attribute, and its dimensions (width and height). </p>
-      <p>3. The component is divided into two sections: the left section containing the image and 
+      <p class="custom-paragraph">3. The component is divided into two sections: the left section containing the image and 
      the right section containing text. </p>
-      <p>4. The "About Me" title is displayed at the top, followed by an underlined separator. </p>
-      <p>5. In the right section, your name, job title, and a description of yourself are displayed. </p>
-      <p>6. Below the description, there is a section with your personal information, including your 
+      <p class="custom-paragraph">4. The "About Me" title is displayed at the top, followed by an underlined separator. </p>
+      <p class="custom-paragraph">5. In the right section, your name, job title, and a description of yourself are displayed. </p>
+      <p class="custom-paragraph">6. Below the description, there is a section with your personal information, including your 
      birthday, phone number, email, location, languages, and availability. </p>
-      <p>7. Finally, a "Download CV" button is provided with hover animation effects.</p>
-      <p> To use this "About" component, you can include it in your main application file or in any 
+      <p class="custom-paragraph">7. Finally, a "Download CV" button is provided with hover animation effects.</p>
+      <p class="custom-paragraph"> To use this "About" component, you can include it in your main application file or in any 
      page where you want to display information about yourself. Simply import the component and 
      render it within your desired page or layout.</p>
 
      <h2>Explanation of the "Service" component</h2>
-       <p>1. The "Service" component displays a set of service cards, each containing information 
+       <p class="custom-paragraph">1. The "Service" component displays a set of service cards, each containing information 
       about a particular service you offer. It uses various icons from different libraries to
       represent these services.</p>
-       <p>2. The services array holds objects representing each service. Each object has an id, title,
+       <p class="custom-paragraph">2. The services array holds objects representing each service. Each object has an id, title,
       text, and icon property. id: A unique identifier for the service.title: The title or name of the service.
       text: A description or text explaining the service.icon: An icon representing the service, chosen from different icon components.  </p>
-       <p>3. The component begins by rendering a "Service" title and an underlined separator.</p>
-       <p>4. It then creates a grid layout to display the service cards. The number of columns in the grid 
+       <p class="custom-paragraph">3. The component begins by rendering a "Service" title and an underlined separator.</p>
+       <p class="custom-paragraph">4. It then creates a grid layout to display the service cards. The number of columns in the grid 
       adjusts based on screen size (responsive design).  </p>
-       <p>5. For each service in the services array, a service card is generated. The card includes: The service icon.The service title.The
+       <p class="custom-paragraph">5. For each service in the services array, a service card is generated. The card includes: The service icon.The service title.The
       service text (description).  </p>
-       <p>6. Hover effects (background color change, shadow, and scale) are applied to the service cards to provide interactivity. </p>
+       <p class="custom-paragraph">6. Hover effects (background color change, shadow, and scale) are applied to the service cards to provide interactivity. </p>
        
-       <p> To use this "Service" component, you can import it into your main application file or any page where you want to showcase your
+       <p class="custom-paragraph"> To use this "Service" component, you can import it into your main application file or any page where you want to showcase your
       services. Simply include the component in your JSX code to display the
       services you offer.</p>
 
 
       <h2> Explanation of the "Skills" component </h2>
-      <p>1. The "Skills" component displays a set of skills with their proficiency percentages in a visually appealing format.</p>
-      <p>2. The skillsData array holds objects representing each skill. Each object has a name (the skill name) and a percentage (the proficiency percentage).</p>
-      <p>3. The component is divided into two main sections: * The left section displays an image (your photo, for example).
+      <p class="custom-paragraph">1. The "Skills" component displays a set of skills with their proficiency percentages in a visually appealing format.</p>
+      <p class="custom-paragraph">2. The skillsData array holds objects representing each skill. Each object has a name (the skill name) and a percentage (the proficiency percentage).</p>
+      <p class="custom-paragraph">3. The component is divided into two main sections: * The left section displays an image (your photo, for example).
       * The right section lists the skills and their proficiency percentages.</p>
-     <p> 4. The image is displayed using the next/image component with responsive sizing.</p>
-     <p> 5. Skills and their percentages are displayed in a column on the right side: * Each skill is listed with its name (e.g., HTML) and proficiency percentage (e.g., 80%).
+     <p class="custom-paragraph"> 4. The image is displayed using the next/image component with responsive sizing.</p>
+     <p class="custom-paragraph"> 5. Skills and their percentages are displayed in a column on the right side: * Each skill is listed with its name (e.g., HTML) and proficiency percentage (e.g., 80%).
       * A visual bar represents the proficiency percentage using a yellow background. * A rounded percentage badge is displayed beside each skill.</p>
-     <p> 6. The data-aos attribute is used to apply a fade-in animation to the skills section when it appears on the screen.</p>
-      <p>To use this "Skills" component, simply import it into your main application file or any page where you want to showcase your skills. 
+     <p class="custom-paragraph"> 6. The data-aos attribute is used to apply a fade-in animation to the skills section when it appears on the screen.</p>
+      <p class="custom-paragraph">To use this "Skills" component, simply import it into your main application file or any page where you want to showcase your skills. 
       You can customize the skillsData array to include your own skills and proficiency percentages.</p>
       
 
 
 
       <h2>Explanation of the "Projects" component</h2>
-      <p>1. The "Projects" component is designed to showcase a list of projects with video previews, descriptions, GitHub links, and demo links.</p>
-     <p> 2. The Projects array holds objects representing each project. Each object has an id, video (path to the project video), 
+      <p class="custom-paragraph">1. The "Projects" component is designed to showcase a list of projects with video previews, descriptions, GitHub links, and demo links.</p>
+     <p class="custom-paragraph"> 2. The Projects array holds objects representing each project. Each object has an id, video (path to the project video), 
       text (project description), githubLink (GitHub repository link), and demoLink (link to the live demo or project webpage).</p>
-      <p>3. The component is divided into sections for each project, displayed in a grid layout.</p>
-      <p>4. For each project: * A video component is used to display a video preview of the project. It allows users to control the video playback.
+      <p class="custom-paragraph">3. The component is divided into sections for each project, displayed in a grid layout.</p>
+      <p class="custom-paragraph">4. For each project: * A video component is used to display a video preview of the project. It allows users to control the video playback.
       * The project description is provided beneath the video. * GitHub and Demo buttons are displayed, allowing users to navigate to the project's GitHub repository or demo page.</p>
-      <p>5. The data-aos attribute is used to apply a fade-up animation when each project appears on the screen.</p>
-      <p>To use this "Projects" component, simply import it into your main application file or any page where you want to showcase your projects. 
+      <p class="custom-paragraph">5. The data-aos attribute is used to apply a fade-up animation when each project appears on the screen.</p>
+      <p class="custom-paragraph">To use this "Projects" component, simply import it into your main application file or any page where you want to showcase your projects. 
       Update the Projects array with your own project details, including video paths, descriptions, GitHub links, and demo links.</p>
       
 
 
       <h2>Explanation of the "Contact" component</h2>
-     <p> 1. The "Contact" component is designed to display contact information, including a contact form and details like location, phone numbers, and email.</p>
-      <p>2. The component is divided into two main sections, with the left column containing the contact form and the right column containing contact information.</p>
-      <p>3. The contact form includes fields for Name, Email, and Message. Users can enter their details and send a message directly through the form.</p>
-      <p>4. The "Send" button allows users to submit the form. You can specify the form action and method when you are ready to handle form submissions on your server.</p>
-      <p>5. Information such as the website's Privacy Policy and Terms of Service are provided with links.</p>
-      <p>6. The right column displays contact information, including the physical location, phone numbers (Phone and WhatsApp), and the email address.
-     <p> To use this "Contact" component, import it into your main application file or any page where you want to provide contact information and a contact form. 
+     <p class="custom-paragraph"> 1. The "Contact" component is designed to display contact information, including a contact form and details like location, phone numbers, and email.</p>
+      <p class="custom-paragraph">2. The component is divided into two main sections, with the left column containing the contact form and the right column containing contact information.</p>
+      <p class="custom-paragraph">3. The contact form includes fields for Name, Email, and Message. Users can enter their details and send a message directly through the form.</p>
+      <p class="custom-paragraph">4. The "Send" button allows users to submit the form. You can specify the form action and method when you are ready to handle form submissions on your server.</p>
+      <p class="custom-paragraph">5. Information such as the website's Privacy Policy and Terms of Service are provided with links.</p>
+      <p class="custom-paragraph">6. The right column displays contact information, including the physical location, phone numbers (Phone and WhatsApp), and the email address.
+     <p class="custom-paragraph"> To use this "Contact" component, import it into your main application file or any page where you want to provide contact information and a contact form. 
       You can further customize the styling and layout to match your website's design.</p>
 </body>
 </html>
