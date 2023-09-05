@@ -20,31 +20,31 @@ export default function Footer() {
             <p>Copyright © 2023 SZ</p>
           </div>
           <div className="flex gap-5 cursor-pointer text-gray-400 ">
-            <Link href="https://github.com/ShahzadAliSoomro">
+            <Link href="https://github.com">
               <TiSocialGithubCircular
                 className="w-9 h-9 hover:bg-green-500 hover:text-white rounded-full 
               hover:-translate-y-2 transition-all duration-500"
               />
             </Link>
-            <Link href="https://www.linkedin.com/in/shahzad-ali-51748122b/">
+            <Link href="https://www.linkedin.com">
               <TiSocialLinkedinCircular
                 className="w-9 h-9 hover:bg-green-500 hover:text-white rounded-full
               hover:-translate-y-2 transition-all duration-500"
               />
             </Link>
-            <Link href="https://www.facebook.com/profile.php?id=100067543970671&mibextid=ZbWKwL">
+            <Link href="https://www.facebook.com">
               <TiSocialFacebookCircular
                 className="w-9 h-9 hover:bg-green-500 hover:text-white rounded-full
               hover:-translate-y-2 transition-all duration-500"
               />
             </Link>
-            <Link href="https://twitter.com/Shahzad67656720?t=VTYdy-uo4cClxdvEI_4DiA&s=08">
+            <Link href="https://twitter.com">
               <TiSocialTwitterCircular
                 className="w-9 h-9 hover:bg-green-500 hover:text-white rounded-full
               hover:-translate-y-2 transition-all duration-500"
               />
             </Link>
-            <Link href="https://instagram.com/shahzadhussain1731043?igshid=MzNlNGNkZWQ4Mg==">
+            <Link href="https://instagram.com">
               <TiSocialInstagramCircular
                 className="w-9 h-9 hover:bg-green-500 hover:text-white rounded-full
                 hover:-translate-y-2 transition-all duration-500"
