@@ -77,6 +77,7 @@ const Projects = [
   },
 ];
 
+
 export default function Project() {
   return (
     <div className="w-full bg-[#1E293B] pt-10">
@@ -89,7 +90,7 @@ export default function Project() {
           {Projects.map((portfolio) => (
             <div key={portfolio.id} className="flex flex-col border shadow p-3">
               {/* Video Component */}
-              <div className="w-full" data-aos="fade-up">
+              <div className="w-full">
                 <iframe
                   width="100%"
                   height="350"
