@@ -41,12 +41,12 @@ export default function Skills() {
               {/* Display Each Skill */}
               {skillsData.map((skill, index) => (
                 <div key={index} className="mt-6 sm:mt-0 sm:mb-12">
-                  <div className="flex flex-col sm:flex-row items-center lg:mt-5 mt-0">
+                  <div className="flex flex-col sm:flex-row justify-center items-center lg:mt-5 mt-0">
                     <div className="flex lg:pl-8 w-full mx-auto items-center">
                       <div className="w-full sm:w-1/2 lg:pl-0 pl-14">
                         <h1 className="text-white">{skill.name} </h1>
                         {/* Skill Proficiency Bar */}
-                        <div className="mb-4 h-4 relative w-72 lg:w-72 rounded-full overflow-hidden bg-gray-200">
+                        <div className="mb-4 h-4 relative w-64 lg:w-72 rounded-full overflow-hidden bg-gray-200">
                           <div
                             className="h-full bg-yellow-400 sm:bg-green-500 absolute"
                             style={{ width: `${skill.percentage}%` }}
