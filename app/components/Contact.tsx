@@ -1,8 +1,22 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { IoLocationOutline, IoCallOutline } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    // Send the form data to your backend or handle it as needed
+    console.log(formData);
+  };
+
   return (
     <div className="w-full bg-[#1E293B]">
       <div className="max-w-[1440px] container mx-auto lg:p-10 p-0">
@@ -17,8 +31,7 @@ export default function Contact() {
                 Fill out the contact form and shahzad will contact you directly.
               </h3>
               <form
-                // action="https://getform.io/f/35a57839-3ffc-417a-84e0-1bffdaf53474"
-                // method="POST"
+              onSubmit={handleSubmit}
                 className="flex flex-col gap-4"
               >
                 {/* Name Input */}
@@ -26,7 +39,9 @@ export default function Contact() {
                   <input
                     type="text"
                     name="name"
-                    placeholder="Name"
+                    placeholder="Name*"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full p-2 py-3 outline-none text-white border-2 placeholder:text-lg placeholder:font-semibold border-gray-200 bg-transparent"
                   />
                 </div>
@@ -36,6 +51,8 @@ export default function Contact() {
                     type="email"
                     name="email"
                     placeholder="Email*"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full p-2 py-3 outline-none text-white border-2 placeholder:text-lg placeholder:font-semibold border-gray-200 bg-transparent"
                   />
                 </div>
@@ -43,7 +60,9 @@ export default function Contact() {
                 <div>
                   <textarea
                     name="message"
-                    placeholder="Message"
+                    placeholder="Message*"
+                    value={formData.message}
+                    onChange={handleChange}
                     className="no-resize appearance-none block w-full text-white border-2 placeholder:text-lg placeholder:font-semibold border-gray-200 bg-transparent py-2 px-2 mb-3 leading-tight focus:outline-none h-48 resize-none"
                   />
                 </div>
@@ -53,7 +72,7 @@ export default function Contact() {
                   className="w-full py-3 border-2 border-green-500 hover:text-white hover:bg-green-500 rounded-full text-green-500 font-bold text-lg
                 hover:-translate-y-3 transition-all duration-500"
                 >
-                  Send
+                  Submit
                 </button>
               </form>
               {/* Privacy Policy */}
@@ -79,22 +98,22 @@ export default function Contact() {
               <div className="flex gap-1 lg:text-lg text-sm items-center">
                 <IoLocationOutline className="w-8 h-8 text-white" />
                 <p className="text-white w-72">
-                  House No.1562 Sector I10/1 Main Double Road, Islamabad
+                  House No.1562 Sector E-11 DHA Phase 6, Lahore
                 </p>
               </div>
               {/* Phone and WhatsApp */}
               <div className="flex gap-1 lg:text-lg text-sm items-center">
                 <IoCallOutline className="w-8 h-8 text-white" />
                 <div>
-                  <p className="text-white">Phone: +92 304-1797211</p>
-                  <p className="text-white ">Whatsaap No: 03041797211</p>
+                  <p className="text-white">Phone: +92 000 000 000</p>
+                  <p className="text-white ">Whatsaap No: 00000000000</p>
                 </div>
               </div>
               {/* Email */}
               <div className="flex gap-1 lg:text-lg text-sm items-center">
                 <HiOutlineMail className="w-8 h-8 text-white" />
                 <p className="text-white ">
-                  Email: shahzadhussain1731043@gmail.com
+                  Email: abc@gmail.com
                 </p>
               </div>
             </div>
