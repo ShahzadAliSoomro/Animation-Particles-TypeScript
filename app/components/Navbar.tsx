@@ -138,7 +138,7 @@ export default function Navbar() {
             <NavItem
               icon={<BiSortDown />}
               label="Resume"
-              link="/public/ShahzadAli.pdf"
+              link="/"
               // navbarBgColor={navbarBgColor}
               activeNavItem={activeNavItem} // Pass activeNavItem to the NavItem component
               handleNavItemClick={handleNavItemClick} // Pass the click handler
