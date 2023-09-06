@@ -20,6 +20,7 @@ export default function About() {
               width={500}
               height={500}
               className="mx-auto"
+              placeholder="empty"
             />
           </div>
 

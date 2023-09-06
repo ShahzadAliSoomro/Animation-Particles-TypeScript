@@ -186,6 +186,7 @@ export default function Hero() {
                height={500}
                className="w-[500px] lg:w-[580px] lg:h-[580px] object-cover"
                loading="eager"
+               priority
                 />
               </div>
               {showIcons && (
