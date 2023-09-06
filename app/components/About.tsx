@@ -25,10 +25,10 @@ export default function About() {
 
           {/* Right Section with Text */}
           <div className="w-full lg:w-6/12 flex flex-col gap-6">
-            <h3 className="text-4xl font-semibold">
+            <h1 className="text-4xl font-semibold">
               Hi There! I'm Shahzad Ali
-            </h3>
-            <h5 className="text-2xl text-green-500">Web Developer</h5>
+            </h1>
+            <h2 className="text-2xl text-green-500">Web Developer</h2>
             {/* Description */}
             <p className="text-lg text-gray-400">
               I am a skilled Web Developer with a passion for crafting seamless

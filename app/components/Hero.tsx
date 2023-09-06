@@ -165,6 +165,8 @@ export default function Hero() {
                           {icon.text}
                         </div>
                       )}
+                       {/* Accessible text for screen readers */}
+        <span className="sr-only">{icon.text}</span>
                     </div>
                   </Link>
                 ))}

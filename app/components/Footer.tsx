@@ -21,34 +21,49 @@ export default function Footer() {
           </div>
           <div className="flex gap-5 cursor-pointer text-gray-400 ">
             <Link href="https://github.com">
-              <TiSocialGithubCircular
-                className="w-9 h-9 hover:bg-green-500 hover:text-[#112A46] rounded-full 
-              hover:-translate-y-2 transition-all duration-500"
-              />
+              <span
+                className="w-9 h-9 flex items-center justify-center rounded-full
+                hover:bg-green-500 hover:text-[#112A46] 
+                hover:-translate-y-2 transition-all duration-500"
+              >
+                <TiSocialGithubCircular aria-label="GitHub" className="w-9 h-9"/>
+              </span>
             </Link>
             <Link href="https://www.linkedin.com">
-              <TiSocialLinkedinCircular
-                className="w-9 h-9 hover:bg-green-500 hover:text-[#112A46] rounded-full
-              hover:-translate-y-2 transition-all duration-500"
-              />
+              <span
+                className="w-9 h-9 flex items-center justify-center rounded-full
+                hover:bg-green-500 hover:text-[#112A46] 
+                hover:-translate-y-2 transition-all duration-500"
+              >
+                <TiSocialLinkedinCircular aria-label="LinkedIn" className="w-9 h-9"/>
+              </span>
             </Link>
             <Link href="https://www.facebook.com">
-              <TiSocialFacebookCircular
-                className="w-9 h-9 hover:bg-green-500 hover:text-[#112A46] rounded-full
-              hover:-translate-y-2 transition-all duration-500"
-              />
+              <span
+                className="w-9 h-9 flex items-center justify-center rounded-full
+                hover:bg-green-500 hover:text-[#112A46] 
+                hover:-translate-y-2 transition-all duration-500"
+              >
+                <TiSocialFacebookCircular aria-label="Facebook" className="w-9 h-9"/>
+              </span>
             </Link>
             <Link href="https://twitter.com">
-              <TiSocialTwitterCircular
-                className="w-9 h-9 hover:bg-green-500 hover:text-[#112A46] rounded-full
-              hover:-translate-y-2 transition-all duration-500"
-              />
+              <span
+                className="w-9 h-9 flex items-center justify-center rounded-full
+                hover:bg-green-500 hover:text-[#112A46] 
+                hover:-translate-y-2 transition-all duration-500"
+              >
+                <TiSocialTwitterCircular aria-label="Twitter" className="w-9 h-9"/>
+              </span>
             </Link>
             <Link href="https://instagram.com">
-              <TiSocialInstagramCircular
-                className="w-9 h-9 hover:bg-green-500 hover:text-[#112A46] rounded-full
+              <span
+                className="w-9 h-9 flex items-center justify-center rounded-full
+                hover:bg-green-500 hover:text-[#112A46] 
                 hover:-translate-y-2 transition-all duration-500"
-              />
+              >
+                <TiSocialInstagramCircular aria-label="Instagram" className="w-9 h-9"/>
+              </span>
             </Link>
           </div>
         </div>

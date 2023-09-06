@@ -75,7 +75,7 @@ export default function Service() {
                   {service.icon}
                 </div>
                 {/* Service Title */}
-                <h3 className="text-xl">{service.title}</h3>
+                <p className="text-xl">{service.title}</p>
 
                 {/* Service Text */}
                 <p className="w-full lg:w-80 text-center text-gray-400 hover:text-white">

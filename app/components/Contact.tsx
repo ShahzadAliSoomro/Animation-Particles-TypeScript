@@ -27,9 +27,9 @@ export default function Contact() {
           <div className="w-full flex lg:space-x-20 flex-wrap lg:flex-nowrap">
             {/* Left Column: Contact Form */}
             <div className="w-full lg:w-6/12 flex flex-col gap-5">
-              <h3 className="text-xl text-white pt-5">
+              <p className="text-xl text-white pt-5">
                 Fill out the contact form and shahzad will contact you directly.
-              </h3>
+              </p>
               <form
               onSubmit={handleSubmit}
                 className="flex flex-col gap-4"
@@ -91,9 +91,9 @@ export default function Contact() {
             </div>
              {/* Right Column: Contact Information */}
             <div className="w-full lg:w-6/12 flex flex-col space-y-10  ">
-              <h3 className="text-xl font-semibold text-white pt-5 ">
+              <p className="text-xl font-semibold text-white pt-5 ">
                 {`Better yet, see us in person!`}
-              </h3>
+              </p>
               {/* Location */}
               <div className="flex gap-1 lg:text-lg text-sm items-center">
                 <IoLocationOutline className="w-8 h-8 text-white" />

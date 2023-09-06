@@ -1,14 +1,14 @@
 "use client";
 import dynamic from "next/dynamic";
 import React from "react";
-// import Link from "next/link";
+import Link from "next/link";
 import {
   TiSocialGithubCircular,
   TiSocialDribbbleCircular,
 } from "react-icons/ti";
 
-const Link = dynamic(() => import("next/link"),
-  { ssr: false });
+// const Link = dynamic(() => import("next/link"),
+//   { ssr: false });
 
 // Define an array of projects, each with an ID, video source, description, GitHub link, and demo link
 const Projects = [
