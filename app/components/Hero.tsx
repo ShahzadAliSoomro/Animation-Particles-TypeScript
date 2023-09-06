@@ -9,7 +9,7 @@ import {
   TiSocialInstagramCircular,
 } from "react-icons/ti";
 import Link from "next/link";
-import AOS from 'aos'; // Importing the AOS library for animations
+// import AOS from 'aos'; // Importing the AOS library for animations
 import 'aos/dist/aos.css'; // Importing AOS styles
 // import ParticlesAnimation from "./ParticlesAnimation";
 import dynamic from "next/dynamic";
@@ -17,7 +17,6 @@ import dynamic from "next/dynamic";
 const ParticlesAnimation = dynamic(() => import('./ParticlesAnimation'), {
   ssr: false
 })
-
 
 const texts = [
   {
@@ -44,16 +43,20 @@ export default function Hero() {
   const [hoveredIcon, setHoveredIcon] = useState<number | null>(null);
   const [showIcons, setShowIcons] = useState(false);
   const [isOpening, setIsOpening] = useState(true);
-
+ 
+   async function init() {
+    const aos = await import('aos');
+    if (typeof window !== 'undefined') {
+      aos.init({
+        duration: 200, // Animation duration in milliseconds
+        once: false, // Whether animations should only happen once
+      });
+    }
+  }
     // Use useEffect to run code after the component is mounted
     useEffect(() => {
-      // Check if running in a browser environment before initializing AOS
-      if (typeof window !== 'undefined') {
-        AOS.init({
-          duration: 500, // Animation duration in milliseconds
-          once: false, // Whether animations should only happen once
-        });
-      }
+      init();
+     
     }, []); // Empty dependency array ensures this effect runs only once
 
   // Effect to show icons after a delay
@@ -174,11 +177,13 @@ export default function Hero() {
               <div className="">
                 {/* Display an image here */}
                 <Image
-                  src="/vec-d.png"
-                  alt="vector"
-                  width={1000}
-                  height={1000}
-                  className="w-[500px] lg:w-[580px] lg:h-[580px] object-cover"
+              
+               src="/vec-d.png"
+               alt="vector"
+               width={500}
+               height={500}
+               className="w-[500px] lg:w-[580px] lg:h-[580px] object-cover"
+               loading="eager"
                 />
               </div>
               {showIcons && (

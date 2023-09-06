@@ -50,7 +50,8 @@ export default function Navbar() {
             navbarBgColor === "white" ? "text-black" : "text-white"
           }`}
         >
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          id="mobile-menu">
             <AiOutlineMenu className="w-8 h-8" />
           </button>
         </div>
