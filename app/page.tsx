@@ -17,6 +17,9 @@ const Service = dynamic(() => import("./components/Service"), {
   ssr: false,
   loading: () => <div>Loading</div>,
 });
+const SkeletonService = dynamic(() => import("./components/skeletons/SkeletonService"), {
+  
+})
 const Skills = dynamic(() => import("./components/Skills"), {
   ssr: false,
   loading: () => <div><SkeletonSkills /></div>,
@@ -87,6 +90,7 @@ export default function Home() {
       services. Simply include the component in your JSX code to display the
       services you offer. */}
       <Service />
+      <SkeletonService />
       {/* Explanation of the "Skills" component
       1. The "Skills" component displays a set of skills with their proficiency percentages in a visually appealing format.
       2. The skillsData array holds objects representing each skill. Each object has a name (the skill name) and a percentage (the proficiency percentage).
