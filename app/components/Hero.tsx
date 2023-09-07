@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   TiSocialLinkedinCircular,
@@ -9,14 +9,13 @@ import {
   TiSocialInstagramCircular,
 } from "react-icons/ti";
 import Link from "next/link";
-// import AOS from 'aos'; // Importing the AOS library for animations
-import 'aos/dist/aos.css'; // Importing AOS styles
-// import ParticlesAnimation from "./ParticlesAnimation";
+import "aos/dist/aos.css"; // Importing AOS styles
 import dynamic from "next/dynamic";
 
-const ParticlesAnimation = dynamic(() => import('./ParticlesAnimation'), {
-  ssr: false
-})
+const ParticlesAnimation = dynamic(() => import("./ParticlesAnimation"), {
+  ssr: false,
+  loading: () => <div>Loading</div>,
+});
 
 const texts = [
   {
@@ -43,21 +42,20 @@ export default function Hero() {
   const [hoveredIcon, setHoveredIcon] = useState<number | null>(null);
   const [showIcons, setShowIcons] = useState(false);
   const [isOpening, setIsOpening] = useState(true);
- 
-   async function init() {
-    const aos = await import('aos');
-    if (typeof window !== 'undefined') {
+
+  async function init() {
+    const aos = (await import("aos")).default;
+    if (typeof window !== "undefined") {
       aos.init({
         duration: 200, // Animation duration in milliseconds
         once: false, // Whether animations should only happen once
       });
     }
   }
-    // Use useEffect to run code after the component is mounted
-    useEffect(() => {
-      init();
-     
-    }, []); // Empty dependency array ensures this effect runs only once
+  // Use useEffect to run code after the component is mounted
+  useEffect(() => {
+    init();
+  }, []); // Empty dependency array ensures this effect runs only once
 
   // Effect to show icons after a delay
   useEffect(() => {
@@ -165,8 +163,8 @@ export default function Hero() {
                           {icon.text}
                         </div>
                       )}
-                       {/* Accessible text for screen readers */}
-        <span className="sr-only">{icon.text}</span>
+                      {/* Accessible text for screen readers */}
+                      <span className="sr-only">{icon.text}</span>
                     </div>
                   </Link>
                 ))}
@@ -179,14 +177,13 @@ export default function Hero() {
               <div className="">
                 {/* Display an image here */}
                 <Image
-              
-               src="/vec-d.png"
-               alt="vector"
-               width={500}
-               height={500}
-               className="w-[500px] lg:w-[580px] lg:h-[580px] object-cover"
-               loading="eager"
-               priority
+                  src="/vec-d.png"
+                  alt="vector"
+                  width={500}
+                  height={500}
+                  className="w-[500px] lg:w-[580px] lg:h-[580px] object-cover"
+                  loading="eager"
+                  priority
                 />
               </div>
               {showIcons && (
@@ -198,7 +195,7 @@ export default function Hero() {
                   <div className="flex flex-col lg:gap-5 xl:gap-5 2xl:gap-5 gap-1">
                     <div className="flex gap-[40px] md:gap-[20%] lg:gap-[280px] xl:gap-[200px] px-[10%] md:px-[10%] lg:px-[50px] xl:px-[45px]">
                       {/* Icons */}
-                    {/* Example icon */}
+                      {/* Example icon */}
                       <div
                         data-aos="fade-up-left"
                         data-aos-duration="2500"

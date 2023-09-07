@@ -51,7 +51,9 @@ export default function Navbar() {
           }`}
         >
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          id="mobile-menu">
+          id="labeldiv"
+          aria-label="Toggle Mobile Menu" >
+            
             <AiOutlineMenu className="w-8 h-8" />
           </button>
         </div>

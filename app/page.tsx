@@ -1,20 +1,31 @@
-"use client";
 import React from "react";
 import dynamic from "next/dynamic";
-import Hero from "./components/Hero";
-import About from "./components/About";
-// import Project from "./components/Project";
-import Contact from "./components/Contact";
-import Service from "./components/Service";
-import Skills from "./components/Skills";
 import type { Metadata } from "next";
 
-// const Hero = dynamic(() => import("./components/Hero"), { ssr: false });
-// const About = dynamic(() => import("./components/About"), { ssr: false });
-const Project = dynamic(() => import("./components/Project"), { ssr: false });
-// const Contact = dynamic(() => import("./components/Contact"), { ssr: false });
-// const Service = dynamic(() => import("./components/Service"), { ssr: false });
-// const Skills = dynamic(() => import("./components/Skills"), { ssr: false });
+const Hero = dynamic(() => import("./components/Hero"), {
+  ssr: false,
+  loading: () => <div>Loading</div>,
+});
+const About = dynamic(() => import("./components/About"), {
+  ssr: false,
+  loading: () => <div>Loading</div>,
+});
+const Project = dynamic(() => import("./components/Project"), {
+  ssr: false,
+  loading: () => <div>Loading</div>,
+});
+const Contact = dynamic(() => import("./components/Contact"), {
+  ssr: false,
+  loading: () => <div>Loading</div>,
+});
+const Service = dynamic(() => import("./components/Service"), {
+  ssr: false,
+  loading: () => <div>Loading</div>,
+});
+const Skills = dynamic(() => import("./components/Skills"), {
+  ssr: false,
+  loading: () => <div> Loading</div>,
+});
 
 // Metadata for your Next.js application
 const metadata: Metadata = {
