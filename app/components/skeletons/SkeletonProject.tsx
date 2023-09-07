@@ -8,7 +8,6 @@ const SkeletonProject = () => {
     githubLink: "#",
     demoLink: "#",
   }));
-
   return (
     <div className="w-full bg-[#1E293B] pt-10">
       <div className="max-w-[1440px] mx-auto container lg:p-10 p-4">

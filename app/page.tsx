@@ -5,6 +5,8 @@ import SkeletonHero from "./components/skeletons/SkeletonHero";
 import SkeletonAbout from "./components/skeletons/SkeletonAbout";
 import SkeletonService from "./components/skeletons/SkeletonService";
 import SkeletonSkills from "./components/skeletons/SkeletonSkills";
+import SkeletonProject from "./components/skeletons/SkeletonProject";
+import SkeletonContact from "./components/skeletons/SkeletonContact";
 
 const Hero = dynamic(() => import("./components/Hero"), {
   ssr: false,
@@ -24,14 +26,11 @@ const Skills = dynamic(() => import("./components/Skills"), {
 });
 const Project = dynamic(() => import("./components/Project"), {
   ssr: false,
-  loading: () => <div>Loading</div>,
+  loading: () => <div><SkeletonProject /></div>,
 });
-const SkeletonProject = dynamic(() => import("./components/skeletons/SkeletonProject"), {
-  
-})
 const Contact = dynamic(() => import("./components/Contact"), {
   ssr: false,
-  loading: () => <div>Loading</div>,
+  loading: () => <div><SkeletonContact /></div>,
 });
 
 // Metadata for your Next.js application
@@ -114,7 +113,6 @@ export default function Home() {
       To use this "Projects" component, simply import it into your main application file or any page where you want to showcase your projects. 
       Update the Projects array with your own project details, including video paths, descriptions, GitHub links, and demo links. */}
       <Project />
-      <SkeletonProject />
       {/* Explanation of the "Contact" component
       1. The "Contact" component is designed to display contact information, including a contact form and details like location, phone numbers, and email.
       2. The component is divided into two main sections, with the left column containing the contact form and the right column containing contact information.
