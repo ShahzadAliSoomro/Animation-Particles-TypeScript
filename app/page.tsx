@@ -1,14 +1,16 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
+import SkeletonHero from "./components/skeletons/SkeletonHero";
+import SkeletonAbout from "./components/skeletons/SkeletonAbout";
 
 const Hero = dynamic(() => import("./components/Hero"), {
   ssr: false,
-  loading: () => <div>Loading</div>,
+  loading: () => <div><SkeletonHero /></div>,
 });
 const About = dynamic(() => import("./components/About"), {
   ssr: false,
-  loading: () => <div>Loading</div>,
+  loading: () => <div><SkeletonAbout /></div>,
 });
 const Project = dynamic(() => import("./components/Project"), {
   ssr: false,
