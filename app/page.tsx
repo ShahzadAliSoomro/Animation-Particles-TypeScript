@@ -8,29 +8,54 @@ import SkeletonSkills from "./components/skeletons/SkeletonSkills";
 import SkeletonProject from "./components/skeletons/SkeletonProject";
 import SkeletonContact from "./components/skeletons/SkeletonContact";
 
+// Import dynamic components with code splitting and disable server-side rendering (ssr: false).
 const Hero = dynamic(() => import("./components/Hero"), {
   ssr: false,
-  loading: () => <div><SkeletonHero /></div>,
+  loading: () => (
+    <div>
+      <SkeletonHero />
+    </div>
+  ),
 });
 const About = dynamic(() => import("./components/About"), {
   ssr: false,
-  loading: () => <div><SkeletonAbout /></div>,
+  loading: () => (
+    <div>
+      <SkeletonAbout />
+    </div>
+  ),
 });
 const Service = dynamic(() => import("./components/Service"), {
   ssr: false,
-  loading: () => <div><SkeletonService /></div>,
+  loading: () => (
+    <div>
+      <SkeletonService />
+    </div>
+  ),
 });
 const Skills = dynamic(() => import("./components/Skills"), {
   ssr: false,
-  loading: () => <div><SkeletonSkills /></div>,
+  loading: () => (
+    <div>
+      <SkeletonSkills />
+    </div>
+  ),
 });
 const Project = dynamic(() => import("./components/Project"), {
   ssr: false,
-  loading: () => <div><SkeletonProject /></div>,
+  loading: () => (
+    <div>
+      <SkeletonProject />
+    </div>
+  ),
 });
 const Contact = dynamic(() => import("./components/Contact"), {
   ssr: false,
-  loading: () => <div><SkeletonContact /></div>,
+  loading: () => (
+    <div>
+      <SkeletonContact />
+    </div>
+  ),
 });
 
 // Metadata for your Next.js application
@@ -55,7 +80,9 @@ export default function Home() {
       To use this Hero component, you can include it
       in your main application file or in any page where you want to display the
       hero section. Just make sure to import the necessary dependencies and set
-      up any required styling and animations. */}
+      up any required styling and animations.
+      The Hero component is responsible for rendering the hero section of your website. It typically includes 
+      animations, text, and an image. While it loads, a SkeletonHero component is displayed as a placeholder. */}
       <Hero />
       {/* Explanation of the "About" component
       1. The "About" component is a section of your webpage that provides information about you, 
@@ -71,7 +98,9 @@ export default function Home() {
       7. Finally, a "Download CV" button is provided with hover animation effects.
       To use this "About" component, you can include it in your main application file or in any 
       page where you want to display information about yourself. Simply import the component and 
-      render it within your desired page or layout. */}
+      render it within your desired page or layout. 
+      The About component provides information about you, including your image, job title, description,
+      and personal details. While it loads, a SkeletonAbout component is displayed as a placeholder.*/}
       <About />
       {/* Explanation of the "Service" component 
       1.The "Service" component displays a set of service cards, each containing information 
@@ -88,7 +117,9 @@ export default function Home() {
       6. Hover effects (background color change, shadow, and scale) are applied to the service cards to provide interactivity. 
       To use this "Service" component, you can import it into your main application file or any page where you want to showcase your
       services. Simply include the component in your JSX code to display the
-      services you offer. */}
+      services you offer.
+      The Service component showcases the services you offer in a visually appealing format. It displays service cards with icons and descriptions. While it loads,
+       a SkeletonService component is displayed as a placeholder. */}
       <Service />
       {/* Explanation of the "Skills" component
       1. The "Skills" component displays a set of skills with their proficiency percentages in a visually appealing format.
@@ -100,7 +131,8 @@ export default function Home() {
       * A visual bar represents the proficiency percentage using a yellow background. * A rounded percentage badge is displayed beside each skill.
       6. The data-aos attribute is used to apply a fade-in animation to the skills section when it appears on the screen.
       To use this "Skills" component, simply import it into your main application file or any page where you want to showcase your skills. 
-      You can customize the skillsData array to include your own skills and proficiency percentages. */}
+      You can customize the skillsData array to include your own skills and proficiency percentages.
+      The Skills component displays your skills along with proficiency percentages in a visually appealing format. While it loads, a SkeletonSkills component is displayed as a placeholder.  */}
       <Skills />
       {/* Explanation of the "Projects" component
       1. The "Projects" component is designed to showcase a list of projects with video previews, descriptions, GitHub links, and demo links.
@@ -111,7 +143,8 @@ export default function Home() {
       * The project description is provided beneath the video. * GitHub and Demo buttons are displayed, allowing users to navigate to the project's GitHub repository or demo page.
       5. The data-aos attribute is used to apply a fade-up animation when each project appears on the screen.
       To use this "Projects" component, simply import it into your main application file or any page where you want to showcase your projects. 
-      Update the Projects array with your own project details, including video paths, descriptions, GitHub links, and demo links. */}
+      Update the Projects array with your own project details, including video paths, descriptions, GitHub links, and demo links. 
+      The Project component showcases a list of projects with video previews, descriptions, GitHub links, and demo links. While it loads, a SkeletonProject component is displayed as a placeholder.*/}
       <Project />
       {/* Explanation of the "Contact" component
       1. The "Contact" component is designed to display contact information, including a contact form and details like location, phone numbers, and email.
@@ -121,7 +154,8 @@ export default function Home() {
       5. Information such as the website's Privacy Policy and Terms of Service are provided with links.
       6. The right column displays contact information, including the physical location, phone numbers (Phone and WhatsApp), and the email address.
       To use this "Contact" component, import it into your main application file or any page where you want to provide contact information and a contact form. 
-      You can further customize the styling and layout to match your website's design. */}
+      You can further customize the styling and layout to match your website's design. 
+      The Contact component provides contact information and a contact form for users to reach out. While it loads, a SkeletonContact component is displayed as a placeholder.*/}
       <Contact />
     </div>
   );
