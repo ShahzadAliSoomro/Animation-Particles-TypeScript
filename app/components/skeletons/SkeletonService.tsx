@@ -26,10 +26,7 @@ const SkeletonService = () => {
               className="border flex justify-center items-center  
               hover:scale-105 transition-all duration-500"
             >
-              <div
-                className="flex flex-col justify-center items-center p-8 gap-4"
-                
-              >
+              <div className="flex flex-col justify-center items-center p-8 gap-4">
                 {/* Service Icon Skeleton */}
                 <div className="animate-pulse bg-gray-400 w-14 h-14 rounded-full"></div>
                 {/* Service Title Skeleton */}
